@@ -1,21 +1,16 @@
 <!-- Vendor CSS -->
-<link rel="stylesheet" href="assets/css/vendor/bootstrap/css/bootstrap.css" />
+<link href="{!! asset('assets/vendor/bootstrap/css/bootstrap.css') !!}" media="all" rel="stylesheet" type="text/css" />
+<link href="{!! asset('assets/vendor/font-awesome/css/font-awesome.css') !!}" media="all" rel="stylesheet" type="text/css" />
+<link href="{!! asset('assets/vendor/magnific-popup/magnific-popup.css') !!}" media="all" rel="stylesheet" type="text/css" />
+<link href="{!! asset('assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css') !!}" media="all" rel="stylesheet" type="text/css" />
 
-<link rel="stylesheet" href="assets/css/vendor/font-awesome/css/font-awesome.css" />
-<link rel="stylesheet" href="assets/css/vendor/magnific-popup/magnific-popup.css" />
-<link rel="stylesheet" href="assets/css/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
+<link href="{!! asset('assets/vendor/jquery-ui/jquery-ui.css') !!}" media="all" rel="stylesheet" type="text/css" />
+<link href="{!! asset('assets/vendor/jquery-ui/jquery-ui.theme.css') !!}" media="all" rel="stylesheet" type="text/css" />
+<link href="{!! asset('assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css') !!}" media="all" rel="stylesheet" type="text/css" />
+<link href="{!! asset('assets/vendor/morris.js/morris.css') !!}" media="all" rel="stylesheet" type="text/css" />
 
-<!-- Specific Page Vendor CSS -->
-<link rel="stylesheet" href="assets/css/vendor/jquery-ui/jquery-ui.css" />
-<link rel="stylesheet" href="assets/css/vendor/jquery-ui/jquery-ui.theme.css" />
-<link rel="stylesheet" href="assets/css/vendor/bootstrap-multiselect/bootstrap-multiselect.css" />
-<link rel="stylesheet" href="assets/css/vendor/morris.js/morris.css" />
 
-<!-- Theme CSS -->
-<link rel="stylesheet" href="assets/css/stylesheets/theme.css" />
+<link href="{!! asset('assets/stylesheets/theme.css') !!}" media="all" rel="stylesheet" type="text/css" />
+<link href="{!! asset('assets/stylesheets/skins/default.css') !!}" media="all" rel="stylesheet" type="text/css" />
+<link href="{!! asset('assets/stylesheets/theme-custom.css') !!}" media="all" rel="stylesheet" type="text/css" />
 
-<!-- Skin CSS -->
-<link rel="stylesheet" href="assets/css/stylesheets/skins/default.css" />
-
-<!-- Theme Custom CSS -->
-<link rel="stylesheet" href="assets/css/stylesheets/theme-custom.css">
