@@ -10,7 +10,7 @@
 
                     @include('admin.partials.errors')
 
-                    {!! Form::open(['url' => '/login', 'method' => 'post']) !!}
+                    {!! Form::open(['url' => '/admin/login', 'method' => 'post']) !!}
                         <div class="form-group mb-lg">
                             {!! Form::label('email', trans('login.email')) !!}
                             <div class="input-group input-group-icon">
@@ -26,7 +26,7 @@
                         <div class="form-group mb-lg">
                             <div class="clearfix">
                                 {!! Form::label('password', trans('login.password')) !!}
-                                <a href="/password/email" class="pull-right" id="recoveryPassword">{!! trans('login.recoveryPassword') !!}</a>
+                                <a href="/admin/password/email" class="pull-right" id="recoveryPassword">{!! trans('login.recoveryPassword') !!}</a>
                             </div>
                             <div class="input-group input-group-icon">
                                 {!! Form::password('password', ['class' => 'form-control input-lg', 'required' => 'required']) !!}

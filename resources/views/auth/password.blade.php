@@ -11,8 +11,10 @@
                         <p class="m-none text-weight-semibold h6">{!! trans('login.messageRecoveryPassword') !!}</p>
                     </div>
                     @include('admin.partials.errors')
+                    @include('admin.partials.status')
 
-                    {!! Form::open(['url' => '/password/email', 'method' => 'post']) !!}
+
+                    {!! Form::open(['url' => '/admin/password/email', 'method' => 'post']) !!}
                         <div class="form-group mb-none">
                             <div class="input-group">
                                 {!! Form::email('email',old('email'), ['class' => 'form-control input-lg', 'required' => 'required']) !!}
