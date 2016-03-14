@@ -29,4 +29,21 @@ class PasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+
+    public function redirectPath()
+    {
+        return route('/admin/password/email');
+    }
+
+    protected  $redirectTo = '/admin';
+
+    protected function getEmailSubject()
+    {
+        trans('login.subject');
+    }
+
+
+
+
 }
