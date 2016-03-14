@@ -11,6 +11,21 @@
 |
 */
 
+/*
+ * Routes for client
+ */
+
+Route::group(['namespace' => 'Frontend'], function() {
+
+    Route::get('/', 'HomeController@index');
+
+
+});
+
+
+/*
+ * Routes for Administrator
+ */
 Route::group(['prefix' => 'admin'], function () {
 
     Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
