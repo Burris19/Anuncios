@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" href="assets-frontend/css/animate.css">
 <link rel="stylesheet" type="text/css" href="assets-frontend/css/prettyPhoto.css">
 <link rel="stylesheet" type="text/css" href="assets-frontend/css/carousel.css">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="assets-frontend/style.css">
 
 <!-- COLORS -->
 <link rel="stylesheet" type="text/css" href="assets-frontend/css/custom.css">
