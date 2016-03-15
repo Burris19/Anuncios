@@ -24,10 +24,10 @@
                             </div>
                         </div>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="images/icons/languages.png" alt="English"> <span class="fa fa-angle-down"></span></button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="assets-frontend/images/icons/languages.png" alt="English"> <span class="fa fa-angle-down"></span></button>
                             <ul class="dropdown-menu start-right" role="menu">
-                                <li><a href="#"><img src="images/icons/en.png" alt="English"></a></li>
-                                <li><a href="#"><img src="images/icons/es.png" alt="Español"></a></li>
+                                <li><a href="#"><img src="assets-frontend/images/icons/en.png" alt="English"></a></li>
+                                <li><a href="#"><img src="assets-frontend/images/icons/es.png" alt="Español"></a></li>
                             </ul>
                         </div><!-- /btn-group -->
                     </div><!-- end left -->
@@ -44,7 +44,7 @@
                                 <div class="navbar-table">
                                     <div class="navbar-cell tight">
                                         <div class="navbar-header">
-                                            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Ova"></a>
+                                            <a class="navbar-brand" href="index.html"><img src="assets-frontend/images/logo.png" alt="Ova"></a>
                                             <div>
                                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
                                                     <span class="sr-only">Toggle navigation</span>
@@ -89,11 +89,11 @@
             <div class="tp-banner-container">
                 <div class="tp-banner">
                     <ul>
-                        <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slider_01.jpg"  data-saveperformance="off"  data-title="Vet">
-                            <img src="upload/slider_01.jpg"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="assets-frontend/upload/slider_01.jpg"  data-saveperformance="off"  data-title="Vet">
+                            <img src="assets-frontend/upload/slider_01.jpg"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                         </li>
-                        <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slider_02.jpg"  data-saveperformance="off"  data-title="Vet">
-                            <img src="upload/slider_02.jpg"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="assets-frontend/upload/slider_02.jpg"  data-saveperformance="off"  data-title="Vet">
+                            <img src="assets-frontend/upload/slider_02.jpg"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                         </li>
                     </ul>
                 </div>
@@ -114,7 +114,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <div class="entry">
-                                <img src="upload/team_01.jpg" alt="">
+                                <img src="assets-frontend/upload/team_01.jpg" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
                                         <a title="" href="#"><i class="fa fa-heart-o"></i></a>
@@ -129,7 +129,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <div class="entry">
-                                <img src="upload/team_02.jpg" alt="">
+                                <img src="assets-frontend/upload/team_02.jpg" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
                                         <a title="" href="#"><i class="fa fa-heart-o"></i></a>
@@ -144,7 +144,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <div class="entry">
-                                <img src="upload/team_03.jpg" alt="">
+                                <img src="assets-frontend/upload/team_03.jpg" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
                                         <a title="" href="#"><i class="fa fa-heart-o"></i></a>
@@ -159,7 +159,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <div class="entry">
-                                <img src="upload/team_04.jpg" alt="">
+                                <img src="assets-frontend/upload/team_04.jpg" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
                                         <a title="" href="#"><i class="fa fa-heart-o"></i></a>
@@ -189,7 +189,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <div class="entry">
-                                <img src="upload/team_01.jpg" alt="">
+                                <img src="assets-frontend/upload/team_01.jpg" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
                                         <a title="" href="#"><i class="fa fa-heart-o"></i></a>
@@ -204,7 +204,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <div class="entry">
-                                <img src="upload/team_02.jpg" alt="">
+                                <img src="assets-frontend/upload/team_02.jpg" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
                                         <a title="" href="#"><i class="fa fa-heart-o"></i></a>
@@ -219,7 +219,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <div class="entry">
-                                <img src="upload/team_03.jpg" alt="">
+                                <img src="assets-frontend/upload/team_03.jpg" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
                                         <a title="" href="#"><i class="fa fa-heart-o"></i></a>
@@ -234,7 +234,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <div class="entry">
-                                <img src="upload/team_04.jpg" alt="">
+                                <img src="assets-frontend/upload/team_04.jpg" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
                                         <a title="" href="#"><i class="fa fa-heart-o"></i></a>
@@ -249,7 +249,7 @@
             </div><!-- end container -->
         </section><!-- end section -->
 
-        <section class="section fullscreen paralbackground parallax" style="background-image:url('upload/parallax_01.jpg');" data-img-width="1920" data-img-height="504" data-diff="100">
+        <section class="section fullscreen paralbackground parallax" style="background-image:url('assets-frontend/upload/parallax_01.jpg');" data-img-width="1920" data-img-height="504" data-diff="100">
             <div class="container">
                 <hr class="invis">
             </div><!-- end container -->
@@ -260,7 +260,7 @@
                 <div id="owl-portfolio" class="owl-custom">
                     <div class="owl-item">
                         <div class="entry">
-                            <img src="upload/banner_01.jpg" alt="">
+                            <img src="assets-frontend/upload/banner_01.jpg" alt="">
                             <div class="magnifier">
                                 <div class="visible-buttons">
                                     <a title="" href="#"><i class="fa fa-link"></i></a>
@@ -271,7 +271,7 @@
 
                     <div class="owl-item">
                         <div class="entry">
-                            <img src="upload/banner_02.jpg" alt="">
+                            <img src="assets-frontend/upload/banner_02.jpg" alt="">
                             <div class="magnifier">
                                 <div class="visible-buttons">
                                     <a title="" href="#"><i class="fa fa-link"></i></a>
@@ -282,7 +282,7 @@
 
                     <div class="owl-item">
                         <div class="entry">
-                            <img src="upload/banner_03.jpg" alt="">
+                            <img src="assets-frontend/upload/banner_03.jpg" alt="">
                             <div class="magnifier">
                                 <div class="visible-buttons">
                                     <a title="" href="#"><i class="fa fa-link"></i></a>
@@ -293,7 +293,7 @@
 
                     <div class="owl-item">
                         <div class="entry">
-                            <img src="upload/banner_04.jpg" alt="">
+                            <img src="assets-frontend/upload/banner_04.jpg" alt="">
                             <div class="magnifier">
                                 <div class="visible-buttons">
                                     <a title="" href="#"><i class="fa fa-link"></i></a>
@@ -304,7 +304,7 @@
 
                     <div class="owl-item">
                         <div class="entry">
-                            <img src="upload/banner_05.jpg" alt="">
+                            <img src="assets-frontend/upload/banner_05.jpg" alt="">
                             <div class="magnifier">
                                 <div class="visible-buttons">
                                     <a title="" href="#"><i class="fa fa-link"></i></a>
@@ -332,7 +332,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <div class="entry">
-                                <img src="upload/team_01.jpg" alt="">
+                                <img src="assets-frontend/upload/team_01.jpg" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
                                         <a title="" href="#"><i class="fa fa-heart-o"></i></a>
@@ -347,7 +347,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <div class="entry">
-                                <img src="upload/team_02.jpg" alt="">
+                                <img src="assets-frontend/upload/team_02.jpg" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
                                         <a title="" href="#"><i class="fa fa-heart-o"></i></a>
@@ -362,7 +362,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <div class="entry">
-                                <img src="upload/team_03.jpg" alt="">
+                                <img src="assets-frontend/upload/team_03.jpg" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
                                         <a title="" href="#"><i class="fa fa-heart-o"></i></a>
@@ -377,7 +377,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <div class="entry">
-                                <img src="upload/team_04.jpg" alt="">
+                                <img src="assets-frontend/upload/team_04.jpg" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
                                         <a title="" href="#"><i class="fa fa-heart-o"></i></a>
@@ -392,7 +392,7 @@
             </div><!-- end container -->
         </section><!-- end section -->
 
-        <section class="section fullscreen paralbackground parallax" style="background-image:url('upload/parallax_02.jpg');" data-img-width="1920" data-img-height="612" data-diff="100">
+        <section class="section fullscreen paralbackground parallax" style="background-image:url('assets-frontend/upload/parallax_02.jpg');" data-img-width="1920" data-img-height="612" data-diff="100">
             <div class="container">
             </div><!-- end container -->
         </section><!-- end section -->
