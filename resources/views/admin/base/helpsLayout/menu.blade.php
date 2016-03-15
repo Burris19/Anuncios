@@ -26,7 +26,7 @@
                         </a>
                         <ul class="nav nav-children">
                             <li>
-                                <a href="config-principal.html">
+                                <a href="#" id="configurationPrincipal">
                                     Principal
                                 </a>
                             </li>

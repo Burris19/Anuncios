@@ -9,5 +9,6 @@
 <script type="text/javascript" src="{!! asset('assets/javascripts/theme.custom.js') !!}"></script>
 <script type="text/javascript" src="{!! asset('assets/javascripts/theme.init.js"') !!}"></script>
 <script type="text/javascript" src="{!! asset('assets/javascripts/dashboard/examples.dashboard.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('assets/javascripts/baseApp.js') !!}"></script>
 
 @yield('other-script')
