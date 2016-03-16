@@ -25,16 +25,13 @@
                             <span>Configuración</span>
                         </a>
                         <ul class="nav nav-children">
-                            <li>
-                                <a href="#" id="configurationPrincipal">
-                                    Principal
-                                </a>
-                            </li>
-                            <li>
-                                <a href="banners-slider.html">
-                                    Banners y Slider
-                                </a>
-                            </li>
+                            @foreach(config('menu') as $key => $value )
+                                <li>
+                                    <a href="{{ $key }}" class="index">
+                                        {{ $value }}
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                     </li>
                     <li class="nav-parent">
