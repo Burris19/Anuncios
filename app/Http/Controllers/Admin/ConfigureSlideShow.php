@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class ConfigurePrincipal extends BaseController
+class ConfigureSlideShow extends BaseController
 {
     /**
      * @var string
@@ -15,6 +15,6 @@ class ConfigurePrincipal extends BaseController
     /**
      * @var string
      */
-    protected $view = 'principal';
+    protected $view = 'slideshow';
 
 }
