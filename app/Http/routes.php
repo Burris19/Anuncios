@@ -30,7 +30,12 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
         Route::get('/', 'HomeController@index');
-        Route::get('configurePrincipal', 'ConfigurePrincipal@index');
+        Route::get('configure-principal', 'ConfigurePrincipal@index');
+        Route::get('configure-seo', 'ConfigureSeo@index');
+        resource('configure-column-one', 'ConfigureColumnOne');
+        resource('configure-column-two', 'ConfigureColumnTwo');
+        resource('configure-banner', 'ConfigureBanners');
+        resource('configure-slide-show', 'ConfigureSlideShow');
 
     });
 
