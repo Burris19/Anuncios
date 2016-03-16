@@ -1,16 +1,12 @@
 (function(){
 
-    $('#configurationPrincipal').on('click', function(e){
+    $('.index').on('click', function(e){
         e.preventDefault();
-
-        $('#containerBase').load('/admin/configurePrincipal', function(){
+        var url = $(this).attr('href');
+        $('#containerBase').load('/admin/'+url, function(){
 
 
         });
-
     });
-
-
-
 
 })();
