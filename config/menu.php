@@ -7,4 +7,5 @@ return [
     'configure-column-two' => 'Links Segunda Columna',
     'configure-banner' => 'Banners',
     'configure-slide-show' => 'Slider'
+    
 ];
