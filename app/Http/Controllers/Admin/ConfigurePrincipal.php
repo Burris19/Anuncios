@@ -1,9 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 
 class ConfigurePrincipal extends BaseController
@@ -16,5 +14,7 @@ class ConfigurePrincipal extends BaseController
      * @var string
      */
     protected $view = 'principal';
+
+
 
 }
