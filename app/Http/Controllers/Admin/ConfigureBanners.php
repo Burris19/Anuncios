@@ -10,4 +10,10 @@ class ConfigureBanners extends BaseController
     protected $module = 'configure';
     protected $view = 'banners';
 
+       protected function getModel()
+    {
+       
+    }
+
+
 }

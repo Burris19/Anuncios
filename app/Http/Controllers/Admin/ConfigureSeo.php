@@ -17,4 +17,9 @@ class ConfigureSeo extends BaseController
      */
     protected $view = 'seo';
 
+          protected function getModel()
+    {
+       
+    }
+
 }

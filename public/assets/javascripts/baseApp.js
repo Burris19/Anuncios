@@ -24,9 +24,9 @@
                 if( response.success){
                     $.notify({
                         title: '<strong>Bien!!</strong>',
-                        message: value
+                        message: response.message
                     },{
-                        type: response.message
+                        type: 'success'
                     });
                 }else{
                     $.each(response.errors, function(indice, value){

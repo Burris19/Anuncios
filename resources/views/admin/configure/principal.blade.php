@@ -14,7 +14,7 @@
                     <div class="row left">
                         <div class="form-group">
                             
-                            {!! Form::label('textoSuperior','Texto Superior',['class'=>'col-md-3 control-label']) !!}
+                            {!! Form::label('textoSuperior','Texto Superior',['class'=>'col-md-3 control-label','required' => 'required']) !!}
                             <div class="col-md-6">
                                 
                             {!! Form::text('topText',null,['class'=>'form-control']) !!}

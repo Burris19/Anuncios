@@ -17,4 +17,9 @@ class ConfigureColumnTwo extends BaseController
      */
     protected $view = 'column2';
 
+          protected function getModel()
+    {
+       
+    }
+
 }

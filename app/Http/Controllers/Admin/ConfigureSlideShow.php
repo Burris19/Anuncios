@@ -17,4 +17,10 @@ class ConfigureSlideShow extends BaseController
      */
     protected $view = 'slideshow';
 
+
+          protected function getModel()
+    {
+       
+    }
+
 }
