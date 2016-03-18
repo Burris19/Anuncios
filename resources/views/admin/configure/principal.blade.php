@@ -10,7 +10,6 @@
                 <h2 class="panel-title">Configuración principal</h2>
             </header>
             <div class="panel-body">
-
                 {!! Form::open(['url' => '/admin/configure-principal', 'method' => 'post', 'class' =>  'sendForm']) !!}
                     <div class="row left">
                         <div class="form-group">

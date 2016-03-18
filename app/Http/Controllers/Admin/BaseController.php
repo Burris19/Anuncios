@@ -5,12 +5,16 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Validator;
+
 
 class BaseController extends Controller
 {
     protected $root = 'admin';
     protected $module = '';
     protected $view = '';
+    protected $input = [];
+    protected $rules = [];
 
     /**
      * Display a listing of the resource.
@@ -40,7 +44,19 @@ class BaseController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $data = $request->only($this->input);
+
+        $validator = Validator::make($data, $this->rules);
+
+        if ($validator->fails()) {
+            $errors  = $validator->errors()->all();
+            return $errors;
+        }else{
+
+            return $data;
+        }
+
+
     }
 
     /**

@@ -15,6 +15,26 @@ class ConfigurePrincipal extends BaseController
      */
     protected $view = 'principal';
 
+    protected $input = [
+        '_token',
+        'topText',
+        'email',
+        'phone',
+        'featuredDescription',
+        'novelties',
+        'bannersDescription'
+    ];
+
+    protected $rules =  [
+
+        'topText' => 'required',
+        'email' => 'required',
+        'phone' => 'required',
+        'featuredDescription' => 'required',
+        'novelties' => 'required',
+        'bannersDescription' => 'required'
+    ];
+
 
 
 }
