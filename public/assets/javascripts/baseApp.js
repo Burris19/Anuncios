@@ -5,15 +5,26 @@
         var url = $(this).attr('href');
         $('#containerBase').load('/admin/'+url, function(){
 
-        	 $('#hola').on('click',function(e){
-    			e.preventDefault();
-    			alert('enviando');
-    });
+            sendData();
+
         });
     });
 
-   
 
-    alert('Bienvenidos');
+    function sendData(){
+        $('.sendForm').submit(function (e){
+            e.preventDefault();
+
+            var self = $(this);
+            var url = self.prop('action')
+            var data = self.serialize();
+
+            $.post(url, data, function (response) {
+                console.log(response);
+            });
+        });
+    }
+
+
 
 })();
