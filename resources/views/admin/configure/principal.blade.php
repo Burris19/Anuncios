@@ -10,6 +10,7 @@
                 <h2 class="panel-title">Configuración principal</h2>
             </header>
             <div class="panel-body">
+                {!! Form::open(['url' => '/admin/configure-principal', 'method' => 'post', 'id' => 'formulario']) !!}
                 <div class="row left">
                     <div class="form-group">
                         <label class="col-md-3 control-label" for="inputDefault">Texto superior:</label>
@@ -61,7 +62,28 @@
                         <button type="button" class="mb-xs mt-xs mr-xs btn btn-primary"><i class="fa fa-floppy-o"></i> Guardar</button>
                     </div>
                 </div>
+
+                <input type="text" required>
+
+
+                <input type="submit" id="gato">
+
+                {!! Form::close() !!}
             </div>
         </section>
     </div>
 </div>
+
+<script>
+    $('#formulario').submit(function (e) {
+        e.preventDefault();
+
+        var self = $(this);
+        var url = self.prop('action')
+        var data = self.serialize();
+
+        $.post(url, data, function (response) {
+
+        });
+    });
+</script>
