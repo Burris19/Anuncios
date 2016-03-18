@@ -13,49 +13,52 @@
                 {!! Form::open(['url' => '/admin/configure-principal', 'method' => 'post', 'class' =>  'sendForm']) !!}
                     <div class="row left">
                         <div class="form-group">
-                            <label class="col-md-3 control-label" for="inputDefault">Texto superior:</label>
+                            
+                            {!! Form::label('textoSuperior','Texto Superior',['class'=>'col-md-3 control-label']) !!}
                             <div class="col-md-6">
-                                <input type="text" name="textosuperios" class="form-control" id="inputDefault">
+                                
+                            {!! Form::text('topText',null,['class'=>'form-control']) !!}
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-3 control-label">E-mail:</label>
+                             {!! Form::label('email','Email',['class'=>'col-md-3 control-label']) !!}
                             <div class="col-md-6">
                                 <div class="input-group mb-md">
                                                             <span class="input-group-addon">
                                                                 <i class="fa fa-envelope"></i>
                                                             </span>
-                                    <input type="text" class="form-control" placeholder="E-mail">
+                                    {!! Form::text('email',null,['class'=>'form-control','placeholder'=>'Email']) !!}
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-3 control-label">Teléfono:</label>
+                           {!! Form::label('phone','Telefono',['class'=>'col-md-3 control-label']) !!}
                             <div class="col-md-6">
                                 <div class="input-group mb-md">
                                                             <span class="input-group-addon">
                                                                 <i class="fa fa-phone"></i>
                                                             </span>
-                                    <input type="text" class="form-control" placeholder="Teléfono">
+                                    {!! Form::text('phone',null,['class'=>'form-control','placeholder'=>'Telefono']) !!}
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="textareaDefault">Descripción Destacadas:</label>
                             <div class="col-md-6">
-                                <textarea class="form-control" rows="3" id="textareaDefault"></textarea>
+                                {!! Form::textarea('featuredDescription', null, ['row' => '1','class'=>'form-control']) !!}
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="textareaDefault">Descripción Novedades:</label>
                             <div class="col-md-6">
-                                <textarea class="form-control" rows="3" id="textareaDefault"></textarea>
+                                 {!! Form::textarea('novelties', null, ['row' => '1','class'=>'form-control']) !!}
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="textareaDefault">Descripción Banners:</label>
                             <div class="col-md-6">
-                                <textarea class="form-control" rows="3" id="textareaDefault"></textarea>
+                                 {!! Form::textarea(' bannersDescription', null, ['row' => '1','class'=>'form-control']) !!}
+                               
                             </div>
                         </div>
                         <div class="panel-body">
