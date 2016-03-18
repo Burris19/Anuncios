@@ -13,4 +13,9 @@ class HomeController extends BaseController
         return view($this->root.'/app');
     }
 
+    protected function getModel()
+    {
+        // TODO: Implement getModel() method.
+    }
+
 }

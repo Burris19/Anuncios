@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\models\principal;
 
 class ConfigurePrincipal extends BaseController
 {
@@ -35,6 +36,10 @@ class ConfigurePrincipal extends BaseController
         'bannersDescription' => 'required'
     ];
 
+    protected function getModel()
+    {
+        return new principal();
+    }
 
 
 }

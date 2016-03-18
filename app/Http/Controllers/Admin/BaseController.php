@@ -8,13 +8,14 @@ use App\Http\Controllers\Controller;
 use Validator;
 
 
-class BaseController extends Controller
+abstract class BaseController extends Controller
 {
     protected $root = 'admin';
     protected $module = '';
     protected $view = '';
     protected $input = [];
     protected $rules = [];
+    abstract protected function getModel();
 
     /**
      * Display a listing of the resource.
@@ -49,12 +50,16 @@ class BaseController extends Controller
         $validator = Validator::make($data, $this->rules);
 
         if ($validator->fails()) {
+            $success = false;
             $errors  = $validator->errors()->all();
-            return $errors;
         }else{
 
-            return $data;
+            $register = $this->getModel()->create($data);
+            $success = true;
+            $message = 'Registro agregado exitosamente';
         }
+
+        return compact('success', 'errors', 'message');
 
 
     }
