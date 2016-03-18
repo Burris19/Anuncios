@@ -10,12 +10,15 @@
                 <h2 class="panel-title">Configuración principal</h2>
             </header>
             <div class="panel-body">
+
                 {!! Form::open(['url' => '/admin/configure-principal', 'method' => 'post', 'id' => 'formulario']) !!}
+
                 <div class="row left">
                     <div class="form-group">
                         <label class="col-md-3 control-label" for="inputDefault">Texto superior:</label>
                         <div class="col-md-6">
                             <input type="text" class="form-control" id="inputDefault">
+                            
                         </div>
                     </div>
                     <div class="form-group">
@@ -59,8 +62,11 @@
                         </div>
                     </div>
                     <div class="panel-body">
-                        <button type="button" class="mb-xs mt-xs mr-xs btn btn-primary"><i class="fa fa-floppy-o"></i> Guardar</button>
+                        <button type="button" id="send-principal" class="mb-xs mt-xs mr-xs btn btn-primary"><i class="fa fa-floppy-o"></i> Guardar</button>
+                        <input type="submit" id="hola" value="gato">
+
                     </div>
+                    {!! Form::close() !!}
                 </div>
 
                 <input type="text" required>
