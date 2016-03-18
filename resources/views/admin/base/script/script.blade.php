@@ -10,5 +10,6 @@
 <script type="text/javascript" src="{!! asset('assets/javascripts/theme.init.js"') !!}"></script>
 <script type="text/javascript" src="{!! asset('assets/javascripts/dashboard/examples.dashboard.js') !!}"></script>
 <script type="text/javascript" src="{!! asset('assets/javascripts/baseApp.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('bower_components/notify/bootstrap-notify.min.js') !!}"></script>
 
 @yield('other-script')
