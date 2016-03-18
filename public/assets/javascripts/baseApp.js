@@ -5,7 +5,7 @@
         var url = $(this).attr('href');
         $('#containerBase').load('/admin/'+url, function(){
 
-            //sendData();
+            sendData();
 
         });
     });
@@ -20,7 +20,26 @@
             var data = self.serialize();
 
             $.post(url, data, function (response) {
-                console.log(response);
+
+                if( response.success){
+                    $.notify({
+                        title: '<strong>Bien!!</strong>',
+                        message: value
+                    },{
+                        type: response.message
+                    });
+                }else{
+                    $.each(response.errors, function(indice, value){
+                        $.notify({
+                            title: '<strong>Wooo!!</strong>',
+                            message: value
+                        },{
+                            type: 'danger'
+                        });
+                    })
+                }
+
+
             });
         });
     }
