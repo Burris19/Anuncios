@@ -31,10 +31,10 @@ Route::group(['prefix' => 'admin'], function () {
     Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
         Route::get('/', 'HomeController@index');
         Route::get('configure-principal', 'ConfigurePrincipal@index');
-
         Route::post('configure-principal','ConfigurePrincipal@store');
 
         Route::get('configure-seo', 'ConfigureSeo@index');
+        Route::post('configure-seo', 'ConfigureSeo@store');
         resource('configure-column-one', 'ConfigureColumnOne');
         resource('configure-column-two', 'ConfigureColumnTwo');
         resource('configure-banner', 'ConfigureBanners');
