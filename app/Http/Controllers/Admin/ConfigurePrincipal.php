@@ -5,6 +5,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\models\principal;
 
+/**
+ * Class ConfigurePrincipal
+ * @package App\Http\Controllers\Admin
+ */
 class ConfigurePrincipal extends BaseController
 {
     /**
@@ -21,6 +25,9 @@ class ConfigurePrincipal extends BaseController
      */
     protected $index = 'first';
 
+    /**
+     * @var array
+     */
     protected $input = [
         '_token',
         'topText',
@@ -31,6 +38,9 @@ class ConfigurePrincipal extends BaseController
         'bannersDescription'
     ];
 
+    /**
+     * @var array
+     */
     protected $rules =  [
 
         'topText' => 'required',
@@ -41,6 +51,9 @@ class ConfigurePrincipal extends BaseController
         'bannersDescription' => 'required'
     ];
 
+    /**
+     * @return principal
+     */
     protected function getModel()
     {
         return new principal();
