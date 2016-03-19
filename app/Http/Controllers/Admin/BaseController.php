@@ -16,7 +16,9 @@ abstract class BaseController extends Controller
     protected $input = [];
     protected $rules = [];
     protected $rulesUpdate = [];
+    protected $index = 'all';
     abstract protected function getModel();
+
 
     /**
      * Display a listing of the resource.
@@ -25,7 +27,12 @@ abstract class BaseController extends Controller
      */
     public function index()
     {
-        return view($this->root.'/'.$this->module.'/'.$this->view);
+        $data = $this->getModel()->all();
+        if($this->index == 'first') {
+            $data = $this->getModel()->first();
+        }
+
+        return view($this->root.'/'.$this->module.'/'.$this->view, compact('data'));
     }
 
     /**
@@ -97,8 +104,11 @@ abstract class BaseController extends Controller
     public function update(Request $request, $id)
     {
 
-        if ($this->getModel()->findOrfaild($id)){
 
+
+        $register = $this->getModel()->find($id);
+
+        if($register){
             $data = $request->only($this->input);
 
             $validator = Validator::make($data, $this->rules);
@@ -108,21 +118,17 @@ abstract class BaseController extends Controller
                 $errors  = $validator->errors()->all();
             }else{
 
-                $this->getModel()->fill($data);
-                $this->getModel()->save();
+                $register->update($data);
+                $register->save();
                 $success = true;
                 $message = 'Registro actualizado exitosamente';
             }
-
         }else {
-
-            $message = "Registro no encontrado";
             $success = false;
-
+            $message = 'No se encontro el registro';
         }
 
         return compact('success', 'errors', 'message');
-
 
     }
 
