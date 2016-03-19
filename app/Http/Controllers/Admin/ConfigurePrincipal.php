@@ -16,6 +16,11 @@ class ConfigurePrincipal extends BaseController
      */
     protected $view = 'principal';
 
+    /**
+     * @var string
+     */
+    protected $index = 'first';
+
     protected $input = [
         '_token',
         'topText',
