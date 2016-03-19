@@ -15,6 +15,7 @@ abstract class BaseController extends Controller
     protected $view = '';
     protected $input = [];
     protected $rules = [];
+    protected $rulesUpdate = [];
     abstract protected function getModel();
 
     /**
@@ -95,7 +96,34 @@ abstract class BaseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        if ($this->getModel()->findOrfaild($id)){
+
+            $data = $request->only($this->input);
+
+            $validator = Validator::make($data, $this->rules);
+
+            if ($validator->fails()) {
+                $success = false;
+                $errors  = $validator->errors()->all();
+            }else{
+
+                $this->getModel()->fill($data);
+                $this->getModel()->save();
+                $success = true;
+                $message = 'Registro actualizado exitosamente';
+            }
+
+        }else {
+
+            $message = "Registro no encontrado";
+            $success = false;
+
+        }
+
+        return compact('success', 'errors', 'message');
+
+
     }
 
     /**
