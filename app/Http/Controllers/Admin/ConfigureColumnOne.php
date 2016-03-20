@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\models\columnOne;
 class ConfigureColumnOne extends BaseController
 {
     /**
@@ -16,9 +17,19 @@ class ConfigureColumnOne extends BaseController
      */
     protected $view = 'column1';
 
-     protected function getModel()
-	   {
-	       
-	   }
+    protected $input = [
+        'name',
+        'URL'
+    ];
+
+    protected $rules = [
+        'name' => 'required',
+        'URL' => 'required'
+    ];
+
+    protected function getModel()
+	{
+	       return new columnOne();
+	}
 
 }
