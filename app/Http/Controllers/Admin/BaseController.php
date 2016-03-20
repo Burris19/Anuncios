@@ -67,7 +67,7 @@ abstract class BaseController extends Controller
             $message = 'Registro agregado exitosamente';
         }
 
-        return compact('success', 'errors', 'message');
+        return compact('success', 'errors', 'message', 'register');
 
 
     }
@@ -80,7 +80,8 @@ abstract class BaseController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = $this->getModel()->find($id);
+        return view('admin.configure.edit.column1', compact('data'));
     }
 
     /**
@@ -91,7 +92,8 @@ abstract class BaseController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = $this->getModel()->find($id);
+        return view('admin.configure.delete.column1', compact('data'));
     }
 
     /**
@@ -103,9 +105,6 @@ abstract class BaseController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-
-
         $register = $this->getModel()->find($id);
 
         if($register){
@@ -140,6 +139,14 @@ abstract class BaseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $register = $this->getModel()->find($id);
+
+        $register->delete();
+
+        $success = true;
+        $message = 'Registro eliminado exitosamente';
+
+        return compact('success','message');
+
     }
 }
