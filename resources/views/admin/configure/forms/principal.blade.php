@@ -1,5 +1,5 @@
 <div class="panel-body">
-    {!! Form::open(['url' => '/admin/configure-principal/' . $data->id, 'method' => 'PUT', 'class' =>  'sendForm']) !!}
+    {!! Form::open(['url' => '/admin/configure-principal/' . $data->id, 'method' => 'PUT', 'class' =>  'UpdateForm']) !!}
     <div class="row left">
 
         <div class="form-group">

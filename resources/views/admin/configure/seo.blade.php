@@ -10,7 +10,7 @@
             </header>
             <div class="panel-body">
 
-                {!! Form::open(['url' => '/admin/configure-seo/' . $data->id, 'method' => 'PUT', 'class' => 'sendForm' ]) !!}
+                {!! Form::open(['url' => '/admin/configure-seo/' . $data->id, 'method' => 'PUT', 'class' => 'UpdateForm' ]) !!}
                     <div class="row left">
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="textareaDefault">Descripción del sitio:</label>
