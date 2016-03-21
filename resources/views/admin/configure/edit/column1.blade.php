@@ -17,6 +17,8 @@
                             <input type="text" class="form-control" name="URL" value="{!! $data->URL !!}" required>
                         </div>
 
+                        @yield('content_modal')
+
 
                 </div>
                 <div class="modal-footer">
