@@ -17,6 +17,7 @@ abstract class BaseController extends Controller
     protected $rules = [];
     protected $rulesUpdate = [];
     protected $index = 'all';
+    protected $filterName = '';
     abstract protected function getModel();
 
 
@@ -27,9 +28,11 @@ abstract class BaseController extends Controller
      */
     public function index()
     {
-        $data = $this->getModel()->all();
+
         if($this->index == 'first') {
             $data = $this->getModel()->first();
+        }else{
+            $data = $this->getModel()->orderBy($this->filterName, 'desc')->get();
         }
 
         return view($this->root.'/'.$this->module.'/'.$this->view, compact('data'));
