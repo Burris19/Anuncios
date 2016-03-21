@@ -11,6 +11,7 @@ use Validator;
 abstract class BaseController extends Controller
 {
     protected $root = 'admin';
+    protected $crud = '';
     protected $rootBase = '';
     protected $module = '';
     protected $view = '';
@@ -88,7 +89,7 @@ abstract class BaseController extends Controller
     public function show($id)
     {
         $data = $this->getModel()->find($id);
-        return view('admin.configure.edit.column1', [
+        return view('admin.configure.edit.'.$this->crud, [
             'data' => $data,
             'rootBase' => $this->rootBase
         ]);
