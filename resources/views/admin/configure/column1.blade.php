@@ -7,7 +7,7 @@
                 <div class="panel-actions">
                     <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
                 </div>
-                <h2 class="panel-title">Links Footer Columna 1</h2>
+                <h2 class="panel-title">{!! trans('label.title_column1') !!}</h2>
             </header>
             <div class="panel-body">
                 {!! Form::open(['url' => '/admin/configure-column-one', 'method' => 'POST' , 'class' => 'sendForm']) !!}
@@ -15,7 +15,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-md">
-                                <button type="submit" class="mb-xs mt-xs mr-xs btn btn-primary"><i class="fa fa-floppy-o"></i> Guardar</button>
+                                <button type="submit" class="mb-xs mt-xs mr-xs btn btn-primary"><i class="fa fa-floppy-o"></i> {!! trans('label.save') !!}</button>
                             </div>
                         </div>
                     </div>

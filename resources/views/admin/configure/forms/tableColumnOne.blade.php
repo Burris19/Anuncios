@@ -1,9 +1,9 @@
-<table class="table table-bordered table-striped mb-none" id="datatable-editable">
+<table class="table table-bordered table-striped mb-none" id="tblListado">
     <thead>
     <tr>
-        <th>Nombre</th>
-        <th>Enlace url</th>
-        <th>Acción</th>
+        <th>{!! trans('label.name') !!}</th>
+        <th>{!! trans('link') !!}</th>
+        <th>{!! trans('actions') !!}</th>
     </tr>
     </thead>
     <tbody class="crud-table-body">
@@ -33,4 +33,21 @@
 </table>
 
 
-
+<script>
+    $('#tblListado').DataTable( {
+        "language": {
+            "lengthMenu": "Mostrar _MENU_ registror por pagína",
+            "zeroRecords": "Ningun resultado ",
+            "info": "pagína _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay ningun registro",
+            "infoFiltered": "(buscados en _MAX_ registros existentes)",
+            "paginate": {
+                "first":      "Primero",
+                "last":       "Ultimo",
+                "next":       "Siguiente",
+                "previous":   "Anterior"
+            },
+            "search":     "Buscar:"
+        }
+    } );
+</script>

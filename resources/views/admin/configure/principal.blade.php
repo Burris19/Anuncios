@@ -7,7 +7,7 @@
                 <div class="panel-actions">
                     <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
                 </div>
-                <h2 class="panel-title">Configuración principal</h2>
+                <h2 class="panel-title">{!! trans('label.title_principal') !!}</h2>
             </header>
             @include('admin.configure.forms.principal')
         </section>
