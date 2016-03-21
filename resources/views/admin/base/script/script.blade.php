@@ -2,6 +2,7 @@
 <script type="text/javascript" src="{!! asset('assets/vendor/jquery/jquery.js') !!}"></script>
 <script type="text/javascript" src="{!! asset('assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js') !!}"></script>
 <script type="text/javascript" src="{!! asset('assets/vendor/bootstrap/js/bootstrap.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('assets/javascripts/jquery.dataTables.min.js') !!}"></script>
 <script type="text/javascript" src="{!! asset('assets/vendor/nanoscroller/nanoscroller.js') !!}"></script>
 <script type="text/javascript" src="{!! asset('assets/vendor/magnific-popup/jquery.magnific-popup.js') !!}"></script>
 <script type="text/javascript" src="{!! asset('assets/vendor/jquery-placeholder/jquery-placeholder.js') !!}"></script>

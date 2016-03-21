@@ -14,3 +14,21 @@
 <link href="{!! asset('assets/stylesheets/skins/default.css') !!}" media="all" rel="stylesheet" type="text/css" />
 <link href="{!! asset('assets/stylesheets/theme-custom.css') !!}" media="all" rel="stylesheet" type="text/css" />
 
+<style >
+    #tblListado_filter{
+        text-align: right;
+    }
+
+    #tblListado_length label select{
+        border-radius: 0px;
+        padding: 0;
+    }
+
+    #tblListado_paginate{
+        font-size: 1.2em;
+    }
+
+    #tblListado_paginate span {
+        padding: 5px 5px;
+    }
+</style>
