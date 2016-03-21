@@ -22,5 +22,8 @@ return [
     'modal_delete' => 'Eliminar Datos',
     'descriptionDelete' => 'Confirmar eliminacion del registro',
     'delete' => 'Eliminar',
-    'title_column2' => 'Enlaces columna 2'
+    'title_column2' => 'Enlaces columna 2',
+    'title_banners' => 'Configuracion Banners',
+    'imagen' => 'Image',
+    'photo' => 'Foto'
 ];

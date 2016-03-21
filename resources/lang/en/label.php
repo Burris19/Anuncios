@@ -22,7 +22,10 @@ return [
     'modal_delete' => 'Delete Data',
     'descriptionDelete' => 'Confirmar Eliminacion?',
     'delete' => 'Delete',
-    'title_column2' => 'Links Footer Column 2'
+    'title_column2' => 'Links Footer Column 2',
+    'title_banners' => 'Settings Banners',
+    'imagen' => 'Imagen',
+    'photo' => 'Photo'
 
 
 ];
