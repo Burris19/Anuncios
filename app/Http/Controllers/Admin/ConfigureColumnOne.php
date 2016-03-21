@@ -29,6 +29,8 @@ class ConfigureColumnOne extends BaseController
         'URL' => 'required'
     ];
 
+    protected $rootBase = 'configure-column-one';
+
     protected function getModel()
 	{
 	       return new columnOne();

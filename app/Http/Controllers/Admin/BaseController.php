@@ -11,6 +11,7 @@ use Validator;
 abstract class BaseController extends Controller
 {
     protected $root = 'admin';
+    protected $rootBase = '';
     protected $module = '';
     protected $view = '';
     protected $input = [];
@@ -35,7 +36,10 @@ abstract class BaseController extends Controller
             $data = $this->getModel()->orderBy($this->filterName, 'desc')->get();
         }
 
-        return view($this->root.'/'.$this->module.'/'.$this->view, compact('data'));
+        return view($this->root.'/'.$this->module.'/'.$this->view, [
+            'data' => $data,
+            'rootBase' => $this->rootBase
+        ]);
     }
 
     /**
@@ -84,7 +88,10 @@ abstract class BaseController extends Controller
     public function show($id)
     {
         $data = $this->getModel()->find($id);
-        return view('admin.configure.edit.column1', compact('data'));
+        return view('admin.configure.edit.column1', [
+            'data' => $data,
+            'rootBase' => $this->rootBase
+        ]);
     }
 
     /**
@@ -96,7 +103,10 @@ abstract class BaseController extends Controller
     public function edit($id)
     {
         $data = $this->getModel()->find($id);
-        return view('admin.configure.delete.column1', compact('data'));
+        return view('admin.configure.delete.column1', [
+            'data' => $data,
+            'rootBase' => $this->rootBase
+        ]);
     }
 
     /**

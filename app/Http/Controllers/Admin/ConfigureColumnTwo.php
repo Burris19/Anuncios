@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\models\columnTwo;
 
 class ConfigureColumnTwo extends BaseController
 {
@@ -17,9 +18,23 @@ class ConfigureColumnTwo extends BaseController
      */
     protected $view = 'column2';
 
-          protected function getModel()
+    protected $input = [
+        'name',
+        'URL'
+    ];
+
+    protected $filterName = 'name';
+
+    protected $rules = [
+        'name' => 'required',
+        'URL' => 'required'
+
+    ];
+
+    protected $rootBase = 'configure-column-two';
+    protected function getModel()
     {
-       
+       return new columnTwo();
     }
 
 }
