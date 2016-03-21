@@ -22,6 +22,8 @@ class ConfigureColumnOne extends BaseController
         'URL'
     ];
 
+    protected $filterName = 'name';
+
     protected $rules = [
         'name' => 'required',
         'URL' => 'required'
