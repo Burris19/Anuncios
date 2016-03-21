@@ -18,6 +18,8 @@ class ConfigureColumnTwo extends BaseController
      */
     protected $view = 'column2';
 
+    protected $crud = 'column1';
+
     protected $input = [
         'name',
         'URL'

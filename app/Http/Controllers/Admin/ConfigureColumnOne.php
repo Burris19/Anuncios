@@ -17,6 +17,8 @@ class ConfigureColumnOne extends BaseController
      */
     protected $view = 'column1';
 
+    protected $crud = 'column1';
+
     protected $input = [
         'name',
         'URL'
