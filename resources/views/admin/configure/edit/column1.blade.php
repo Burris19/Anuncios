@@ -1,7 +1,7 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            {!! Form::open(['url' => '/admin/configure-column-one/' . $data->id, 'method' => 'PUT', 'class' => 'UpdateForm']) !!}
+            {!! Form::open(['url' => '/admin/'. $rootBase . '/' . $data->id, 'method' => 'PUT', 'class' => 'UpdateForm']) !!}
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">{!! trans('label.modal_edit') !!}</h4>
