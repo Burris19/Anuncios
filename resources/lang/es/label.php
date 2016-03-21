@@ -21,5 +21,6 @@ return [
     'cancel' => 'Cancelar',
     'modal_delete' => 'Eliminar Datos',
     'descriptionDelete' => 'Confirmar eliminacion del registro',
-    'delete' => 'Eliminar'
+    'delete' => 'Eliminar',
+    'title_column2' => 'Enlaces columna 2'
 ];

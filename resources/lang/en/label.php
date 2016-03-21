@@ -21,7 +21,8 @@ return [
     'cancel' => 'Cancel'    ,
     'modal_delete' => 'Delete Data',
     'descriptionDelete' => 'Confirmar Eliminacion?',
-    'delete' => 'Delete'
+    'delete' => 'Delete',
+    'title_column2' => 'Links Footer Column 2'
 
 
 ];
