@@ -26,7 +26,6 @@ class HomeController extends Controller
         $column2 = columnTwo::all();
         $banners = banners::all();
         $sliders = sliders::all();
-
         return view('frontend.index.index', compact('principal', 'column1', 'column2', 'banners', 'sliders'));
     }
 
