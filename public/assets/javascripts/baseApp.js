@@ -16,37 +16,40 @@
     function sendData(){
         $('.sendForm').submit(function (e){
             e.preventDefault();
-
             var self = $(this);
-            var url = self.prop('action')
-            var data = self.serialize();
+            var url = self.prop('action');
+            $.ajax( {
+                url: url,
+                type: 'POST',
+                data: new FormData( this ),
+                processData: false,
+                contentType: false,
+                success: function(response) {
 
-            $.post(url, data, function (response) {
+                    if( response.success){
 
-                if( response.success){
+                        loadContent(window.urlActive);
 
-                    loadContent(window.urlActive);
-
-                    $.notify({
-                        title: '<strong>Bien!!</strong>',
-                        message: response.message
-                    },{
-                        type: 'success'
-                    });
-
-                }else{
-                    $.each(response.errors, function(indice, value){
                         $.notify({
-                            title: '<strong>Wooo!!</strong>',
-                            message: value
+                            title: '<strong>Bien!!</strong>',
+                            message: response.message
                         },{
-                            type: 'danger'
+                            type: 'success'
                         });
-                    })
+
+                    }else{
+                        $.each(response.errors, function(indice, value){
+                            $.notify({
+                                title: '<strong>Wooo!!</strong>',
+                                message: value
+                            },{
+                                type: 'danger'
+                            });
+                        })
+                    }
                 }
-
-
             });
+
         });
     }
 

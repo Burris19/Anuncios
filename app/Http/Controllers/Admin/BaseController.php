@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Validator;
+use App\Helpers\UploadX;
 
 
 abstract class BaseController extends Controller
@@ -61,14 +62,21 @@ abstract class BaseController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->only($this->input);
 
+        $data = $request->only($this->input);
         $validator = Validator::make($data, $this->rules);
 
         if ($validator->fails()) {
             $success = false;
             $errors  = $validator->errors()->all();
         }else{
+
+            if($request->hasFile('input-file-preview')) {
+                $image = UploadX::uploadFile($request->file('input-file-preview'),'banners', time());
+                $data['photo'] = $image['url'];
+            }else{
+                $data['photo'] = "defaultBanner.png";
+            }
 
             $register = $this->getModel()->create($data);
             $success = true;
