@@ -7,9 +7,9 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="top-details">
-                            <strong>Escorts in Mallorca</strong>
-                            <span><i class="fa fa-envelope-o"></i> <a href="mailto:info@escortsinmallorca.com">info@escortsinmallorca.com</a></span>
-                            <span><i class="fa fa-phone"></i>  (+34) 123 456 789</span>
+                            <strong>{!! $principal->topText !!}</strong>
+                            <span><i class="fa fa-envelope-o"></i> <a href="{!! $principal->email !!}">{!! $principal->email !!}</a></span>
+                            <span><i class="fa fa-phone"></i>  {!! $principal->phone !!}</span>
                         </div>
                     </div><!-- end left -->
                     <div class="col-md-6 text-right">
@@ -89,12 +89,11 @@
             <div class="tp-banner-container">
                 <div class="tp-banner">
                     <ul>
-                        <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="assets-frontend/upload/slider_01.jpg"  data-saveperformance="off"  data-title="Vet">
-                            <img src="assets-frontend/upload/slider_01.jpg"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                        </li>
-                        <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="assets-frontend/upload/slider_02.jpg"  data-saveperformance="off"  data-title="Vet">
-                            <img src="assets-frontend/upload/slider_02.jpg"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                        </li>
+                        @foreach($sliders as $slider)
+                            <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="{!! $slider->URL !!}"  data-saveperformance="off"  data-title="{!! $slider->name !!}">
+                                <img src="{!! $slider->URL !!}"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -105,7 +104,7 @@
                 <div class="big-title text-center">
                     <h3>Escorts Deluxe</h3>
                     <hr>
-                    <p class="lead">Breve descripción para la sección de Escorts Deluxe</p>
+                    <p class="lead">{!! $principal->bannersDescription !!}</p>
                 </div><!-- end title -->
 
                 <hr class="invis">
@@ -180,7 +179,7 @@
                 <div class="big-title text-center">
                     <h3>Escorts Destacadas</h3>
                     <hr>
-                    <p class="lead">Breve descripción para la sección de Escorts Destacadas</p>
+                    <p class="lead">{!! $principal->featuredDescription !!}</p>
                 </div><!-- end title -->
 
                 <hr class="invis">
@@ -258,60 +257,21 @@
         <section class="section white">
             <div class="container">
                 <div id="owl-portfolio" class="owl-custom">
-                    <div class="owl-item">
-                        <div class="entry">
-                            <img src="assets-frontend/upload/banner_01.jpg" alt="">
-                            <div class="magnifier">
-                                <div class="visible-buttons">
-                                    <a title="" href="#"><i class="fa fa-link"></i></a>
-                                </div><!-- end buttons -->
-                            </div><!-- end magnifier -->
-                        </div><!-- end entry -->
-                    </div><!-- end owl-item -->
+                    @foreach($banners as $banner)
+                        <div class="owl-item">
+                            <div class="entry">
+                                <img src="{!! $banner->photo !!}" alt="">
+                                <div class="magnifier">
+                                    <div class="visible-buttons">
+                                        <a title="{!! $banner->name !!}" href="{!! $banner->URL !!}"><i class="fa fa-link"></i></a>
+                                    </div><!-- end buttons -->
+                                </div><!-- end magnifier -->
+                            </div><!-- end entry -->
+                        </div><!-- end owl-item -->
+                    @endforeach
 
-                    <div class="owl-item">
-                        <div class="entry">
-                            <img src="assets-frontend/upload/banner_02.jpg" alt="">
-                            <div class="magnifier">
-                                <div class="visible-buttons">
-                                    <a title="" href="#"><i class="fa fa-link"></i></a>
-                                </div><!-- end buttons -->
-                            </div><!-- end magnifier -->
-                        </div><!-- end entry -->
-                    </div><!-- end owl-item -->
 
-                    <div class="owl-item">
-                        <div class="entry">
-                            <img src="assets-frontend/upload/banner_03.jpg" alt="">
-                            <div class="magnifier">
-                                <div class="visible-buttons">
-                                    <a title="" href="#"><i class="fa fa-link"></i></a>
-                                </div><!-- end buttons -->
-                            </div><!-- end magnifier -->
-                        </div><!-- end entry -->
-                    </div><!-- end owl-item -->
 
-                    <div class="owl-item">
-                        <div class="entry">
-                            <img src="assets-frontend/upload/banner_04.jpg" alt="">
-                            <div class="magnifier">
-                                <div class="visible-buttons">
-                                    <a title="" href="#"><i class="fa fa-link"></i></a>
-                                </div><!-- end buttons -->
-                            </div><!-- end magnifier -->
-                        </div><!-- end entry -->
-                    </div><!-- end owl-item -->
-
-                    <div class="owl-item">
-                        <div class="entry">
-                            <img src="assets-frontend/upload/banner_05.jpg" alt="">
-                            <div class="magnifier">
-                                <div class="visible-buttons">
-                                    <a title="" href="#"><i class="fa fa-link"></i></a>
-                                </div><!-- end buttons -->
-                            </div><!-- end magnifier -->
-                        </div><!-- end entry -->
-                    </div><!-- end owl-item -->
                 </div><!-- end row -->
             </div><!-- end container -->
         </section><!-- end section -->
@@ -323,7 +283,7 @@
                 <div class="big-title text-center">
                     <h3>Novedades</h3>
                     <hr>
-                    <p class="lead">Breve descripción de la sección de novedades</p>
+                    <p class="lead">{!! $principal->novelties !!}</p>
                 </div><!-- end title -->
 
                 <hr class="invis">
@@ -407,12 +367,12 @@
                                 <address>
                                     <i class="fa fa-envelope-o alignleft"></i>
                                     <strong>Email:</strong>
-                                    <p><a href="mailto:info@escortsinmallorca.com">info@escortsinmallorca.com</a></p>
+                                    <p><a href="{!! $principal->email !!}">{!! $principal->email !!}</a></p>
                                 </address>
                                 <address>
                                     <i class="fa fa-phone alignleft"></i>
                                     <strong>Teléfono</strong>
-                                    <p>(+34) 123 456 789</p>
+                                    <p>{!! $principal->phone !!}</p>
                                 </address>
                             </div><!-- end about-widget -->
                         </div><!-- end widget -->
@@ -424,11 +384,9 @@
                             <div class="latest-posts">
                                 <div class="media">
                                     <div class="media-body">
-                                        <h4 class="media-heading"><a href="#" title="">Escorts Rusas</a></h4>
-                                        <h4 class="media-heading"><a href="#" title="">Escorts Francesas</a></h4>
-                                        <h4 class="media-heading"><a href="#" title="">Escorts Colombianas</a></h4>
-                                        <h4 class="media-heading"><a href="#" title="">Escorts Rumanas</a></h4>
-                                        <h4 class="media-heading"><a href="#" title="">Escorts Latinas</a></h4>
+                                        @foreach($column1 as $column)
+                                            <h4 class="media-heading"><a href="{!! $column->URL !!}" title="">{!! $column->name !!}</a></h4>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div><!-- end latest-posts -->
@@ -441,11 +399,9 @@
                             <div class="latest-posts">
                                 <div class="media">
                                     <div class="media-body">
-                                        <h4 class="media-heading"><a href="#" title="">Escorts Morenas</a></h4>
-                                        <h4 class="media-heading"><a href="#" title="">Escorts Rubias</a></h4>
-                                        <h4 class="media-heading"><a href="#" title="">Escorts Castañas</a></h4>
-                                        <h4 class="media-heading"><a href="#" title="">Escorts Pelirrojas</a></h4>
-                                        <h4 class="media-heading"><a href="#" title="">Escorts Latinas</a></h4>
+                                        @foreach($column2 as $column)
+                                            <h4 class="media-heading"><a href="{!! $column->URL !!}" title="">{!! $column->name !!}</a></h4>
+                                        @endforeach
 
                                     </div>
                                 </div>
@@ -459,12 +415,9 @@
                             <div class="latest-posts">
                                 <div class="media">
                                     <div class="media-body">
-                                        <h4 class="media-heading"><a href="#" title="">Link de interés 1</a></h4>
-                                        <h4 class="media-heading"><a href="#" title="">Link de interés 2</a></h4>
-                                        <h4 class="media-heading"><a href="#" title="">Link de interés 3</a></h4>
-                                        <h4 class="media-heading"><a href="#" title="">Link de interés 4</a></h4>
-                                        <h4 class="media-heading"><a href="#" title="">Link de interés 5</a></h4>
-
+                                        @foreach($column2 as $column)
+                                            <h4 class="media-heading"><a href="{!! $column->URL !!}" title="">{!! $column->name !!}</a></h4>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div><!-- end latest-posts -->
