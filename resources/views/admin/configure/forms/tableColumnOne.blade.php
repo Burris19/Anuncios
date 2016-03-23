@@ -18,7 +18,7 @@
                 <a href="/admin/{!! $rootBase !!}" data-id="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
             </td>
         </tr>
-        @if($rootBase == 'configure-column-one' || $rootBase == 'configure-column-two')
+        @if($rootBase == 'configure-column-one' || $rootBase == 'configure-column-two' || $rootBase == 'configure-column-tree')
             @include('admin.configure.forms.rowsColumns')
         @elseif($rootBase == 'configure-banner')
             @include('admin.configure.forms.rowsColumnsBanner')
