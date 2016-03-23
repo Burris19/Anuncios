@@ -18,8 +18,13 @@
 </head>
 <body>
 
-    @yield('content')
-
+    <div class="wrapper">
+        @include('frontend.base.header')
+        @include('frontend.base.nav')
+            @yield('content')
+        @include('frontend.base.footer')
+        @include('frontend.base.copyright')
+    </div>
     @include('frontend.script.script')
 </body>
 </html>
