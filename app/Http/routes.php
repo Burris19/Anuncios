@@ -17,6 +17,11 @@
 
 Route::group(['namespace' => 'Frontend'], function() {
     Route::get('/', 'HomeController@index');
+    Route::get('home', 'HomeController@index');
+    Route::get('agency', 'PagesController@agency');
+    Route::get('boy', 'PagesController@boy');
+    Route::get('trans', 'PagesController@trans');
+    Route::get('escorts', 'PagesController@escorts');
 });
 
 
@@ -35,7 +40,6 @@ Route::group(['prefix' => 'admin'], function () {
         resource('configure-slide-show', 'ConfigureSlideShow');
 
     });
-
 
     Route::get('login', 'Auth\AuthController@getLogin');
     Route::post('login', 'Auth\AuthController@postLogin');
