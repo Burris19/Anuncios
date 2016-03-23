@@ -55,7 +55,7 @@
                     <div class="latest-posts">
                         <div class="media">
                             <div class="media-body">
-                                @foreach($column2 as $column)
+                                @foreach($column3 as $column)
                                     <h4 class="media-heading"><a href="{!! $column->URL !!}" title="">{!! $column->name !!}</a></h4>
                                 @endforeach
                             </div>
