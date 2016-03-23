@@ -45,4 +45,12 @@ class PagesController extends Controller
         return view('frontend.pages.scorts',compact('principal','column1', 'column2'));
     }
 
+
+    function profile($id){
+        $principal = principal::first();
+        $column1 = columnOne::all();
+        $column2 = columnTwo::all();
+        return view('frontend.profiles.baseProfiles',compact('principal','column1', 'column2'));
+    }
+
 }

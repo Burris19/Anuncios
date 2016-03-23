@@ -1,8 +1,6 @@
 @extends('frontend.base.layout')
 
 @section('content')
-    <div class="wrapper">
-
         <section class="section white">
             <div class="container">
                 <div class="big-title text-center">
@@ -63,5 +61,4 @@
             </div><!-- end container -->
         </section><!-- end section -->
 
-    </div>
 @endsection

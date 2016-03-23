@@ -1,17 +1,17 @@
-<script src="assets-frontend/js/jquery.min.js"></script>
-<script src="assets-frontend/js/bootstrap.js"></script>
-<script src="assets-frontend/js/parallax.js"></script>
-<script src="assets-frontend/js/retina.js"></script>
-<script src="assets-frontend/js/wow.js"></script>
-<script src="assets-frontend/js/progress.js"></script>
-<script src="assets-frontend/js/jquery.prettyPhoto.js"></script>
-<script src="assets-frontend/js/carousel.js"></script>
-<script src="assets-frontend/js/carousel-plugins.js"></script>
-<script src="assets-frontend/js/custom.js"></script>
-<script src="assets-frontend/js/typetext.js"></script>
+<script src="/assets-frontend/js/jquery.min.js"></script>
+<script src="/assets-frontend/js/bootstrap.js"></script>
+<script src="/assets-frontend/js/parallax.js"></script>
+<script src="/assets-frontend/js/retina.js"></script>
+<script src="/assets-frontend/js/wow.js"></script>
+<script src="/assets-frontend/js/progress.js"></script>
+<script src="/assets-frontend/js/jquery.prettyPhoto.js"></script>
+<script src="/assets-frontend/js/carousel.js"></script>
+<script src="/assets-frontend/js/carousel-plugins.js"></script>
+<script src="/assets-frontend/js/custom.js"></script>
+<script src="/assets-frontend/js/typetext.js"></script>
 
-<script src="assets-frontend/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-<script src="assets-frontend/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/assets-frontend/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="/assets-frontend/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
 <script type="text/javascript">
     /* ==============================================

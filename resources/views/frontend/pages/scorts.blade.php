@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
     <section class="section white">
         <div class="container">
             <div class="big-title text-center">
