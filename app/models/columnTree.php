@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class columnTree extends Model
 {
-    protected $table = 'columnOne';
+    protected $table = 'columnTree';
+
     protected $fillable = [
             'name',
             'URL'
