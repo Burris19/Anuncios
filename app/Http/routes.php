@@ -22,6 +22,7 @@ Route::group(['namespace' => 'Frontend'], function() {
     Route::get('boy', 'PagesController@boy');
     Route::get('trans', 'PagesController@trans');
     Route::get('escorts', 'PagesController@escorts');
+    Route::get('profile/{id}', 'PagesController@profile');
 });
 
 
@@ -36,6 +37,7 @@ Route::group(['prefix' => 'admin'], function () {
         resource('configure-seo', 'ConfigureSeo');
         resource('configure-column-one', 'ConfigureColumnOne');
         resource('configure-column-two', 'ConfigureColumnTwo');
+        resource('configure-column-tree', 'ConfigureColumnTree');
         resource('configure-banner', 'ConfigureBanners');
         resource('configure-slide-show', 'ConfigureSlideShow');
 
