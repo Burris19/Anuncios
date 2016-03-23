@@ -25,7 +25,8 @@ return [
     'title_column2' => 'Links Footer Column 2',
     'title_banners' => 'Settings Banners',
     'imagen' => 'Imagen',
-    'photo' => 'Photo'
+    'photo' => 'Photo',
+    'title_column3' => 'Links Footer Column 3'
 
 
 ];

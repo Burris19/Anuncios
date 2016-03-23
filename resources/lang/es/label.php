@@ -25,5 +25,6 @@ return [
     'title_column2' => 'Enlaces columna 2',
     'title_banners' => 'Configuracion Banners',
     'imagen' => 'Image',
-    'photo' => 'Foto'
+    'photo' => 'Foto',
+    'title_column3' => 'Enlaces columna 3'
 ];
