@@ -10,47 +10,36 @@ use App\Http\Controllers\Controller;
 use App\models\principal;
 use App\models\columnOne;
 use App\models\columnTwo;
-use App\models\banners;
-use App\models\sliders;
+use App\models\columnTree;
 
 class PagesController extends Controller
 {
     function agency(){
-        $principal = principal::first();
-        $column1 = columnOne::all();
-        $column2 = columnTwo::all();
-//        $banners = banners::all();
-//        $sliders = sliders::all();
-        return view('frontend.pages.agency',compact('principal','column1', 'column2'));
+        return $this->base('pages', 'agency');
     }
 
     function boy(){
-        $principal = principal::first();
-        $column1 = columnOne::all();
-        $column2 = columnTwo::all();
-        return view('frontend.pages.boys',compact('principal','column1', 'column2'));
+        return $this->base('pages', 'boys');
     }
 
     function trans(){
-        $principal = principal::first();
-        $column1 = columnOne::all();
-        $column2 = columnTwo::all();
-        return view('frontend.pages.trans',compact('principal','column1', 'column2'));
+        return $this->base('pages', 'trans');
     }
 
     function escorts(){
-        $principal = principal::first();
-        $column1 = columnOne::all();
-        $column2 = columnTwo::all();
-        return view('frontend.pages.scorts',compact('principal','column1', 'column2'));
+        return $this->base('pages', 'scorts');
     }
 
 
     function profile($id){
+        return $this->base('profiles', 'baseProfiles');
+    }
+
+    protected function base($folder, $view){
         $principal = principal::first();
         $column1 = columnOne::all();
         $column2 = columnTwo::all();
-        return view('frontend.profiles.baseProfiles',compact('principal','column1', 'column2'));
+        $column3 = columnTree::all();
+        return view('frontend.' . $folder . '.' . $view, compact('principal','column1', 'column2', 'column3'));
     }
-
 }
