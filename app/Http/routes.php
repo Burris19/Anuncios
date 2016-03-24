@@ -40,6 +40,7 @@ Route::group(['prefix' => 'admin'], function () {
         resource('configure-column-tree', 'ConfigureColumnTree');
         resource('configure-banner', 'ConfigureBanners');
         resource('configure-slide-show', 'ConfigureSlideShow');
+        resource('profiles','Profiles');
 
     });
 

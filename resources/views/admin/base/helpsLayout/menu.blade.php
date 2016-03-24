@@ -40,31 +40,14 @@
                             <span>Perfiles</span>
                         </a>
                         <ul class="nav nav-children">
-                            <li>
-                                <a href="galeria.html#*">
-                                    Ver todos
-                                </a>
-                            </li>
-                            <li>
-                                <a href="galeria.html#escorts">
-                                    Escorts
-                                </a>
-                            </li>
-                            <li>
-                                <a href="galeria.html#trans">
-                                    Trans
-                                </a>
-                            </li>
-                            <li>
-                                <a href="galeria.html#boys">
-                                    Boys
-                                </a>
-                            </li>
-                            <li>
-                                <a href="galeria.html#agencias">
-                                    Agencias
-                                </a>
-                            </li>
+                            @foreach(config('menuProfiles') as $key => $value )
+                                <li>
+                                    <a href="{{ $key }}" class="index">
+                                        {{ $value }}
+                                    </a>
+                                </li>
+                            @endforeach
+
                         </ul>
                     </li>
                     <li>

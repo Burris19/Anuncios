@@ -26,7 +26,37 @@ return [
     'title_banners' => 'Settings Banners',
     'imagen' => 'Imagen',
     'photo' => 'Photo',
-    'title_column3' => 'Links Footer Column 3'
+    'title_column3' => 'Links Footer Column 3',
+    'personal_Information' => 'Personal Information',
+    'profile' => 'Profile',
+    'profile_new' => 'New Profile',
+    'active' => 'Active',
+    'disable' => 'Disable',
+    'name_profile' => 'Full Name',
+    'description_profile' => 'Description',
+    'age_profile' => 'Age',
+    'phone_profile' => 'Phone',
+    'height' => 'Height',
+    'measurements_profile' => 'Measurements',
+    'escort_deluxe_profile' => 'Deluxe Escort',
+    'featured_escort_profile' => 'Escort Destacada',
+    'category_profile' => 'Category',
+    'pryce_profile' => 'Precy',
+    'nationality_profile' => 'Nationality',
+    'languages_profile' => 'Languages',
+    'sexual_orientation_profile' => 'Sexual Orientation',
+    'departures_profile' => 'Departures',
+    'timetable_profile' => 'Timetable',
+    'spanish' => 'Spanish',
+    'english' => 'English',
+    'data_seo' => 'SEO Data',
+    'title_metatags' => 'Title Metatags',
+    'description_metatags' => 'Description Metatags',
+    'personal_information' => 'Personal Information',
+    'instructions' => 'Fill in the fields in Spanish',
+    'instructions_english' => 'Please fill in English'
+
+
 
 
 ];
