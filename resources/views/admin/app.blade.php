@@ -6,7 +6,7 @@
         <header class="header">
             <div class="logo-container">
                 <a href="../" class="logo">
-                    <img src="assets/images/logo.png" height="35" alt="Escorts in Mallorca - Website Administrator" />
+                    <img src="/assets/images/logo.png" height="35" alt="Escorts in Mallorca - Website Administrator" />
                 </a>
                 <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
                     <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
@@ -31,7 +31,7 @@
                 <div id="userbox" class="userbox">
                     <a href="#" data-toggle="dropdown">
                         <figure class="profile-picture">
-                            <img src="assets/images/!logged-user.jpg" alt="Administrador" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
+                            <img src="/assets/images/!logged-user.jpg" alt="Administrador" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
                         </figure>
                         <div class="profile-info" data-lock-name="Administrador" data-lock-email="info@escortsinmallorca.com">
                             <span class="name">Escorts in Mallorca</span>
@@ -44,6 +44,9 @@
                     <div class="dropdown-menu">
                         <ul class="list-unstyled">
                             <li class="divider"></li>
+                            <li>
+                                <a class=" index" href="configure-profile/{{Auth::user()->id}}/edit"><i class="fa fa-gear"></i> Configurar</a>
+                            </li>
                             <li>
                                 <a role="menuitem" tabindex="-1" href="/admin/logout"><i class="fa fa-power-off"></i> Cerrar</a>
                             </li>
