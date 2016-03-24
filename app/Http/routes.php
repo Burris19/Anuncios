@@ -41,6 +41,7 @@ Route::group(['prefix' => 'admin'], function () {
         resource('configure-banner', 'ConfigureBanners');
         resource('configure-slide-show', 'ConfigureSlideShow');
         resource('profiles','Profiles');
+        resource('configure-profile', 'UsersController', ['only' => ['index', 'edit', 'update']]);
 
     });
 
