@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\models\image_profile;
+
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\models\image_profile;
 use App\models\profile;
+use App\Helpers\UploadX;
 
 class Profiles extends Controller
 {
@@ -70,15 +72,15 @@ class Profiles extends Controller
         $english = profile::create($data2);
 
         for($i= 1; $i <6; $i++){
-            if($request->hasFile('input'.$i)) {
-                $image = UploadX::uploadFile($request->file('input'.$i),'profile', $i.time());
+            if(isset($data['input'.$i])) {
+                $image = UploadX::uploadFile($data['input'.$i],'profile', $i.time());
                 $data3['url'.$i] = $image['url'];
             }
         }
 
         $data3['profile_id'] = $spanish->id;
-        $photos = image_profile::create($data3);
 
+        $photos = image_profile::create($data3);
         $message = 'Registro agregado Exitosamente';
         return redirect()->back()->with('status', $message);
     }

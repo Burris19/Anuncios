@@ -45,7 +45,7 @@
                     </ul>
 
 
-                        {!! Form::open(['url' => '/admin/profiles', 'method' => 'post', 'class' => 'form-horizontal']) !!}
+                        {!! Form::open(['url' => '/admin/profiles', 'method' => 'post', 'class' => 'form-horizontal', "enctype" => "multipart/form-data"]) !!}
                             <div class="tab-content">
                                 <div id="w2-spanish" class="tab-pane active">
                                     {!! trans('label.instructions') !!}

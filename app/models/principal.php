@@ -15,6 +15,5 @@ class principal extends Model
           'featuredDescription',
           'novelties',
           'bannersDescription'
-
       ];
 }
