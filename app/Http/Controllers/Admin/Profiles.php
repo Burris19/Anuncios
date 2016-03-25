@@ -21,8 +21,7 @@ class Profiles extends Controller
      */
     public function index()
     {
-        $data = profile::all();
-//        return $data[0]->images;
+        $data = profile::where('is_spanish', 'true')->get();
         return view('admin.profiles.profiles', compact('data'));
     }
 
@@ -78,9 +77,11 @@ class Profiles extends Controller
             if(isset($data['input'.$i])) {
                 $image = UploadX::uploadFile($data['input'.$i],'profile', $i.time());
                 $data3['url'.$i] = $image['url'];
+                $data4['url'.$i] = $image['url'];
             }
         }
 
+        $data3['profile_id'] = $spanish->id;
         $data3['profile_id'] = $spanish->id;
 
         $photos = image_profile::create($data3);
