@@ -80,6 +80,10 @@ class UsersController extends Controller
         $user->save();
 
         return \Redirect::back()->with('status', 'Modificacion Realizada Correctamente');   
+
+        // return response()->json([
+        //         "message" => 'Modificacion Realizada Correctamente'
+        //     ]);
     }
 
     /**
