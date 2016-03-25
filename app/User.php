@@ -10,6 +10,8 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
+use Carbon\Carbon;
+
 class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
                                     CanResetPasswordContract
@@ -44,10 +46,12 @@ class User extends Model implements AuthenticatableContract,
         }
     }
 
-    public function setPhotoAttribute($valor)
+    public function setPhotoAttribute($photo)
     {
-        if ( !empty($valor) ) {
-            return $this->attributes['photo'];
+        if ( !empty($photo) ) {
+            $this->attributes['photo'] = Carbon::now()->second . $photo->getClientOriginalName();
+            $name = Carbon::now()->second . $photo->getClientOriginalName();
+            \Storage::disk('local')->put($name, \File::get($photo));
         } 
     }
 }

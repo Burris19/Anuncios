@@ -10,7 +10,7 @@
             </header>
             <div class="panel-body">
                 
-                {!!Form::model($user, ['route' => ['admin.configure-profile.update', $user->id], 'method' => 'PUT'])!!}
+                {!!Form::model($user, ['route' => ['admin.configure-profile.update', $user->id], 'method' => 'PUT', 'files' => true])!!}
 
                     <div class="form-group">
                         <label for="name">Nombre</label>
