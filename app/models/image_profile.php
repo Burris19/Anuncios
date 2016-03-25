@@ -15,7 +15,7 @@ class image_profile extends Model
 
     protected $fillable = [
         'profile_id',
-        'urlPrincipal',
+        'url1',
         'url2',
         'url3',
         'url4',
