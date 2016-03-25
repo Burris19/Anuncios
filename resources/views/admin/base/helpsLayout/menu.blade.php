@@ -40,13 +40,19 @@
                             <span>Perfiles</span>
                         </a>
                         <ul class="nav nav-children">
-                            @foreach(config('menuProfiles') as $key => $value )
+
                                 <li>
-                                    <a href="{{ $key }}" class="index">
-                                        {{ $value }}
+                                    <a href="profiles/create" class="index">
+                                        Crear Perfil
                                     </a>
                                 </li>
-                            @endforeach
+
+                            <li>
+                                <a href="/admin/profiles" >
+                                    Ver todos
+                                </a>
+                            </li>
+
 
                         </ul>
                     </li>

@@ -60,10 +60,10 @@
 
         <div class="inner-wrapper">
 
-           @include('admin.base.helpsLayout.menu')
+            @include('admin.base.helpsLayout.menu')
             <section role="main" class="content-body" id="containerBase">
-                @include('admin.partials.status')
-                @include('admin.partials.errors')
+                {{--@include('admin.partials.status')--}}
+                {{--@include('admin.partials.errors')--}}
                 @yield('containerBody')
             </section>
         </div>

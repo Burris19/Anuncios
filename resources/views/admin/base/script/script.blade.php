@@ -16,5 +16,6 @@
 
 <script type="text/javascript" src="{!! asset('assets/javascripts/jquery.bootstrap.wizard.js') !!}"></script>
 
-
 @yield('other-script')
+
+
