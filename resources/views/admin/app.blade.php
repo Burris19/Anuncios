@@ -16,14 +16,13 @@
             <!-- start: search & user box -->
             <div class="header-right">
 
-                <form action="pages-search-results.html" class="search nav-form">
-                    <div class="input-group input-search">
-                        <input type="text" class="form-control" name="q" id="q" placeholder="Buscar...">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-							</span>
-                    </div>
-                </form>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="assets-frontend/images/icons/languages.png" alt="English"> <span class="fa fa-angle-down"></span></button>
+                    <ul class="dropdown-menu start-right" role="menu">
+                        <li><a href="/admin/locale?locale=en"><img src="assets-frontend/images/icons/en.png" alt="English" width="40" height="30"> {!! trans('label.english') !!}</a></li>
+                        <li><a href="/admin/locale?locale=es"><img src="assets-frontend/images/icons/es.png" alt="Español" width="40" height="30"> {!! trans('label.spanish') !!}</a></li>
+                    </ul>
+                </div>
 
                 <span class="separator"></span>
 

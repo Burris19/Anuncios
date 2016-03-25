@@ -14,6 +14,7 @@
 <link href="{!! asset('assets/stylesheets/skins/default.css') !!}" media="all" rel="stylesheet" type="text/css" />
 <link href="{!! asset('assets/stylesheets/theme-custom.css') !!}" media="all" rel="stylesheet" type="text/css" />
 
+
 <style >
     #tblListado_filter{
         text-align: right;
