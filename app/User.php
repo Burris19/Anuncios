@@ -30,7 +30,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password', 'photo'];
+    protected $fillable = ['name', 'password', 'photo'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -41,7 +41,7 @@ class User extends Model implements AuthenticatableContract,
 
     public function setPasswordAttribute($valor)
     {
-        if ( !empty($valor) ) {
+        if ( !empty(trim($valor)) ) {
             $this->attributes['password'] = \Hash::make($valor);
         }
     }

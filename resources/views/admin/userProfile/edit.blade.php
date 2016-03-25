@@ -10,7 +10,7 @@
             </header>
             <div class="panel-body">
                 
-                {!!Form::model($user, ['route' => ['admin.configure-profile.update', $user->id], 'method' => 'PUT', 'files' => true])!!}
+                {!!Form::model($user, ['route' => ['admin.configure-profile.update', $user->id], 'method' => 'PUT', 'files' => true, 'class' => 'sendEdit'])!!}
 
                     <div class="form-group">
                         <label for="name">Nombre</label>
@@ -18,13 +18,13 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Correo Electronico</label>
-                        {!!Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Correo Electronico', 'required' => 'required'])!!}
+                        <label for="password">Contraseña</label>
+                        {!!Form::password('password', ['class' => 'form-control', 'placeholder' => 'Contraseña', 'id' => 'pass'])!!}
                     </div>
 
                     <div class="form-group">
-                        <label for="password">Contraseña</label>
-                        {!!Form::password('password', ['class' => 'form-control', 'placeholder' => 'Contraseña'])!!}
+                        <label for="password_confirmation">Confirmacion Contraseña</label>
+                        {!!Form::password('password_confirmation', ['class' => 'form-control', 'placeholder' => 'Confirmacion Contraseña', 'id' => 'passVerify'])!!}
                     </div>
 
                     <div class="form-group">
@@ -41,3 +41,39 @@
         </section>
     </div>
 </div>
+
+<script>
+
+    function alertError(message){
+
+        $.notify({
+            title: '<strong>Wooo!!</strong>',
+            message: message
+        },{
+            type: 'danger'
+        });
+    }
+
+    $(document).ready(function(){
+        $('.sendEdit').submit(function (e){
+
+            var pass = $("#pass").val().trim();
+            var passVerify = $("#passVerify").val().trim();
+            $("#passVerify").val(passVerify);
+            $("#pass").val(pass);
+
+            if (pass.length != 0 && pass.length < 8) {
+                alertError('La Contraseña tiene que contener por lo menos 8 caracteres.');
+                e.preventDefault();
+                return;
+            }
+
+            if (pass != passVerify) {
+                alertError('confirmación de la contraseña y contraseña deben coincidir.');
+                e.preventDefault();
+                return;
+            }
+        });
+    });
+    
+</script>
