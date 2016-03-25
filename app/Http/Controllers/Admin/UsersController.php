@@ -79,7 +79,7 @@ class UsersController extends Controller
         $user->fill($request->all());
         $user->save();
 
-        return \Redirect::back();   
+        return \Redirect::back()->with('status', 'Modificacion Realizada Correctamente');   
     }
 
     /**

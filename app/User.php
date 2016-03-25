@@ -49,6 +49,11 @@ class User extends Model implements AuthenticatableContract,
     public function setPhotoAttribute($photo)
     {
         if ( !empty($photo) ) {
+
+            if ($this->photo != 'userDefault.png') { 
+                \Storage::delete($this->photo);
+            }
+
             $this->attributes['photo'] = Carbon::now()->second . $photo->getClientOriginalName();
             $name = Carbon::now()->second . $photo->getClientOriginalName();
             \Storage::disk('local')->put($name, \File::get($photo));

@@ -31,7 +31,7 @@
                 <div id="userbox" class="userbox">
                     <a href="#" data-toggle="dropdown">
                         <figure class="profile-picture">
-                            <img src="/assets/images/!logged-user.jpg" alt="Administrador" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
+                            <img src="/assets/imgProfiles/{{Auth::user()->photo}}" alt="Administrador" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
                         </figure>
                         <div class="profile-info" data-lock-name="Administrador" data-lock-email="info@escortsinmallorca.com">
                             <span class="name">Escorts in Mallorca</span>
@@ -45,7 +45,7 @@
                         <ul class="list-unstyled">
                             <li class="divider"></li>
                             <li>
-                                <a class=" index" href="configure-profile/{{Auth::user()->id}}/edit"><i class="fa fa-gear"></i> Configurar</a>
+                                <a class="index" href="configure-profile/{{Auth::user()->id}}/edit"><i class="fa fa-gear"></i> Configurar</a>
                             </li>
                             <li>
                                 <a role="menuitem" tabindex="-1" href="/admin/logout"><i class="fa fa-power-off"></i> Cerrar</a>
