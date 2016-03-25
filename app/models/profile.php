@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class profile extends Model
 {
-    //
     protected $table = 'profile';
     protected $fillable = [
         'is_active',
@@ -31,4 +30,12 @@ class profile extends Model
         'description_metatags',
         'title_metatags',
     ];
+
+    protected $relations = [
+        'images'
+    ];
+
+    public function images(){
+        return $this->hasOne('App\models\image_profile', 'profile_id', 'id');
+    }
 }

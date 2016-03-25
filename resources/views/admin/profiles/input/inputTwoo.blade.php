@@ -68,10 +68,10 @@
             <label class="col-md-4 control-label" for="inputSuccess">{!! trans('label.category_profile') !!}</label>
             <div class="col-md-8">
                 <select class="form-control mb-md" name="category2">
-                    <option value="es">Escorts</option>
-                    <option value="tr">Trans</option>
-                    <option value="bo">Boys</option>
-                    <option value="ag">Agencias</option>
+                    <option value="escorts">Escorts</option>
+                    <option value="trans">Trans</option>
+                    <option value="boys">Boys</option>
+                    <option value="agencias">Agencias</option>
                 </select>
             </div>
         </div>

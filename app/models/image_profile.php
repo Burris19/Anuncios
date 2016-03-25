@@ -7,8 +7,6 @@
  */
 
 namespace App\models;
-
-
 use Illuminate\Database\Eloquent\Model;
 
 class image_profile extends Model

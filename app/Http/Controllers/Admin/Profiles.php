@@ -11,6 +11,7 @@ use App\models\image_profile;
 use App\models\profile;
 use App\Helpers\UploadX;
 
+
 class Profiles extends Controller
 {
     /**
@@ -20,7 +21,9 @@ class Profiles extends Controller
      */
     public function index()
     {
-        return view('admin.profiles.profiles');
+        $data = profile::all();
+//        return $data[0]->images;
+        return view('admin.profiles.profiles', compact('data'));
     }
 
     /**
