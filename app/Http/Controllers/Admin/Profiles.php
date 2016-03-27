@@ -194,7 +194,7 @@ class Profiles extends Controller
             $photos->save();
             $message = 'Registro Editado Exitosamente';
 
-            return redirect()->back()->with('status', $message);
+            return redirect()->to('/admin')->with('status', trans('label.success_update'));
         }
     }
 
@@ -206,6 +206,20 @@ class Profiles extends Controller
      */
     public function destroy($id)
     {
+        $data = profile::findOrFail($id);
 
+
+        if($data){
+            $dataSpanish = profile::where('code','=', $data->code)->where('is_spanish','=','true')->first();
+            $dataEnglish = profile::where('code','=', $data->code)->where('is_spanish','=','false')->first();
+            $images = image_profile::where('profile_id', '=' , $dataSpanish->id)->first();
+
+            $images->delete();
+            $dataSpanish->delete();
+            $dataEnglish->delete();
+
+        }
+
+        return redirect()->to('/admin')->with('status', trans('label.success_delete'));
     }
 }
