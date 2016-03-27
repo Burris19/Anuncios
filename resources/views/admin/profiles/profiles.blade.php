@@ -113,7 +113,7 @@
 
             var id = $(this).data('id');
             var urlBase = $(this).attr('href');
-            var url = urlBase + '/' + id ;
+            var url = urlBase + id ;
 
             $('#modalDiv').load(url, function(){
                 $('#myModal').modal('show');

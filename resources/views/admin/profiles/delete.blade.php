@@ -1,7 +1,7 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            {!! Form::open(['url' => '/admin/profile/' . $dataSpanish->id, 'method' => 'DELETE' ]) !!}
+            {!! Form::open(['url' => '/admin/profiles/' . $dataSpanish->id, 'method' => 'DELETE' ]) !!}
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">{!! trans('label.modal_delete') !!}</h4>
@@ -9,7 +9,7 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-4 center">
-                        <img src="assets/images/delete.png" alt="">
+                        <img src="/assets/images/delete.png" alt="">
                     </div>
 
                     <div class="col-md-8">

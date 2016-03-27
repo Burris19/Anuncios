@@ -39,13 +39,13 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileName">{!! trans('label.name_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control"  name="name2" placeholder="Valentina Perez" value="{!! $dataEnglish->name !!}" required>
+                <input type="text" class="form-control"  name="name2" placeholder="Valentina Perez" value="{!! $dataEnglish->name !!}"  >
             </div>
         </div>
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileAge">{!! trans('label.age_profile') !!}</label>
             <div class="col-md-8">
-                <input type="number" class="form-control" name="age2"  placeholder="22" value="{!! $dataEnglish->age !!}" required>
+                <input type="number" class="form-control" name="age2"  placeholder="22" value="{!! $dataEnglish->age !!}"  >
             </div>
         </div>
     </div>
@@ -59,14 +59,14 @@
                 <span class="input-group-addon">
                     <i class="fa fa-phone"></i>
                 </span>
-                    <input type="number" class="form-control" placeholder="111 111 111" name="phone2" value="{!! $dataEnglish->phone !!}" required>
+                    <input type="number" class="form-control" placeholder="111 111 111" name="phone2" value="{!! $dataEnglish->phone !!}"  >
                 </div>
             </div>
         </div>
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileMeasure">{!! trans('label.measurements_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control"  name="measurements2" placeholder="90-60-90" value="{!! $dataEnglish->measurements !!}" required>
+                <input type="text" class="form-control"  name="measurements2" placeholder="90-60-90" value="{!! $dataEnglish->measurements !!}"  >
             </div>
         </div>
     </div>
@@ -76,7 +76,7 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileHeight">{!! trans('label.height') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control"  name="height2" placeholder="165" value="{!! $dataEnglish->height !!}" required>
+                <input type="text" class="form-control"  name="height2" placeholder="165" value="{!! $dataEnglish->height !!}"  >
             </div>
         </div>
         <div class="row col-md-6">
@@ -121,7 +121,7 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileNationality">{!! trans('label.nationality_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="nationality2" value="{!! $dataEnglish->nationality !!}" required>
+                <input type="text" class="form-control" name="nationality2" value="{!! $dataEnglish->nationality !!}"  >
             </div>
         </div>
     </div>
@@ -131,13 +131,13 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileLanguage">{!! trans('label.languages_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="languages2" placeholder="Español , Ingles , Portugués" value="{!! $dataEnglish->languages !!}" required>
+                <input type="text" class="form-control" name="languages2" placeholder="Español , Ingles , Portugués" value="{!! $dataEnglish->languages !!}"  >
             </div>
         </div>
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileOrientation">{!! trans('label.sexual_orientation_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="sexual_orientation2" placeholder="Bisexualidad " value="{!! $dataEnglish->sexual_orientation !!}" required>
+                <input type="text" class="form-control" name="sexual_orientation2" placeholder="Bisexualidad " value="{!! $dataEnglish->sexual_orientation !!}"  >
             </div>
         </div>
     </div>
@@ -147,13 +147,13 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileExit">{!! trans('label.departures_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="departures2" value="{!! $dataEnglish->departures !!}" required>
+                <input type="text" class="form-control" name="departures2" value="{!! $dataEnglish->departures !!}"  >
             </div>
         </div>
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileTimetable">{!! trans('label.timetable_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="timetable2" placeholder="24 hrs" value="{!! $dataEnglish->timetable !!}" required>
+                <input type="text" class="form-control" name="timetable2" placeholder="24 hrs" value="{!! $dataEnglish->timetable !!}"  >
             </div>
         </div>
     </div>
@@ -163,7 +163,7 @@
         <div class="row col-md-12">
             <label class="col-md-2 control-label" for="textareaDefault">{!! trans('label.description_profile') !!}</label>
             <div class="col-md-10">
-                <textarea class="form-control" rows="3"  name="description2" required>{!! $dataEnglish->description !!}</textarea>
+                <textarea class="form-control" rows="3"  name="description2"  >{!! $dataEnglish->description !!}</textarea>
             </div>
         </div>
     </div>
@@ -176,13 +176,13 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileTitlemeta">{!! trans('label.title_metatags') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="title_metatags2" value="{!! $dataEnglish->title_metatags !!}" required>
+                <input type="text" class="form-control" name="title_metatags2" value="{!! $dataEnglish->title_metatags !!}"  >
             </div>
         </div>
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="textareaDescmeta">{!! trans('label.description_metatags') !!}</label>
             <div class="col-md-8">
-                <textarea class="form-control" rows="3" name="description_metatags2" required>{!! $dataEnglish->description_metatags !!}</textarea>
+                <textarea class="form-control" rows="3" name="description_metatags2"  >{!! $dataEnglish->description_metatags !!}</textarea>
             </div>
         </div>
     </div>
@@ -191,7 +191,7 @@
     <div class="form-group">
         <label class="col-md-2 control-label" for="textareaKeywords">{!! trans('label.key_words') !!}</label>
         <div class="col-md-6">
-            <textarea class="form-control" rows="3" name="key_words2" required>{!! $dataEnglish->key_words !!}</textarea>
+            <textarea class="form-control" rows="3" name="key_words2"  >{!! $dataEnglish->key_words !!}</textarea>
         </div>
     </div>
 </fieldset>

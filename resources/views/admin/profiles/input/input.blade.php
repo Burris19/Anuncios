@@ -24,13 +24,13 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileName">{!! trans('label.name_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control"  name="name" placeholder="Valentina Perez" required>
+                <input type="text" class="form-control"  name="name" placeholder="Valentina Perez"  >
             </div>
         </div>
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileAge">{!! trans('label.age_profile') !!}</label>
             <div class="col-md-8">
-                <input type="number" class="form-control" name="age"  placeholder="22" required>
+                <input type="number" class="form-control" name="age"  placeholder="22"  >
             </div>
         </div>
     </div>
@@ -44,14 +44,14 @@
                 <span class="input-group-addon">
                     <i class="fa fa-phone"></i>
                 </span>
-                    <input type="number" class="form-control" placeholder="111 111 111" name="phone" required>
+                    <input type="number" class="form-control" placeholder="111 111 111" name="phone"  >
                 </div>
             </div>
         </div>
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileMeasure">{!! trans('label.measurements_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control"  name="measurements" placeholder="90-60-90" required>
+                <input type="text" class="form-control"  name="measurements" placeholder="90-60-90"  >
             </div>
         </div>
     </div>
@@ -61,7 +61,7 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileHeight">{!! trans('label.height') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control"  name="height" placeholder="165" required>
+                <input type="text" class="form-control"  name="height" placeholder="165"  >
             </div>
         </div>
         <div class="row col-md-6">
@@ -111,7 +111,7 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileNationality">{!! trans('label.nationality_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="nationality" required>
+                <input type="text" class="form-control" name="nationality"  >
             </div>
         </div>
     </div>
@@ -121,13 +121,13 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileLanguage">{!! trans('label.languages_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="languages" placeholder="Español , Ingles , Portugués" required>
+                <input type="text" class="form-control" name="languages" placeholder="Español , Ingles , Portugués"  >
             </div>
         </div>
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileOrientation">{!! trans('label.sexual_orientation_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="sexual_orientation" placeholder="Bisexualidad " required>
+                <input type="text" class="form-control" name="sexual_orientation" placeholder="Bisexualidad "  >
             </div>
         </div>
     </div>
@@ -137,13 +137,13 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileExit">{!! trans('label.departures_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="departures" required>
+                <input type="text" class="form-control" name="departures"  >
             </div>
         </div>
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileTimetable">{!! trans('label.timetable_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="timetable" placeholder="24 hrs" required>
+                <input type="text" class="form-control" name="timetable" placeholder="24 hrs"  >
             </div>
         </div>
     </div>
@@ -153,7 +153,7 @@
         <div class="row col-md-12">
             <label class="col-md-2 control-label" for="textareaDefault">{!! trans('label.description_profile') !!}</label>
             <div class="col-md-10">
-                <textarea class="form-control" rows="3"  name="description" required></textarea>
+                <textarea class="form-control" rows="3"  name="description"  ></textarea>
             </div>
         </div>
     </div>
@@ -166,13 +166,13 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileTitlemeta">{!! trans('label.title_metatags') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" name="title_metatags" required>
+                <input type="text" class="form-control" name="title_metatags"  >
             </div>
         </div>
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="textareaDescmeta">{!! trans('label.description_metatags') !!}</label>
             <div class="col-md-8">
-                <textarea class="form-control" rows="3" name="description_metatags" required></textarea>
+                <textarea class="form-control" rows="3" name="description_metatags"  ></textarea>
             </div>
         </div>
     </div>
@@ -181,7 +181,7 @@
     <div class="form-group">
         <label class="col-md-2 control-label" for="textareaKeywords">{!! trans('label.key_words') !!}</label>
         <div class="col-md-6">
-            <textarea class="form-control" rows="3" name="key_words" required></textarea>
+            <textarea class="form-control" rows="3" name="key_words"  ></textarea>
         </div>
     </div>
 </fieldset>
