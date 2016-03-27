@@ -20,7 +20,7 @@ return [
     'save_update' => 'Save changes',
     'cancel' => 'Cancel'    ,
     'modal_delete' => 'Delete Data',
-    'descriptionDelete' => 'Confirmar Eliminacion?',
+    'descriptionDelete' => 'Confirm Delete?',
     'delete' => 'Delete',
     'title_column2' => 'Links Footer Column 2',
     'title_banners' => 'Settings Banners',
@@ -77,7 +77,8 @@ return [
     'update_profile' => 'Update Profile',
     'password' => 'Password',
     'confirm_password' => 'Confirm Password',
-    'success_update' => 'Information Update Success'
+    'success_update' => 'Information Update Success',
+    'success_delete' => 'Delete success'
 
 
 

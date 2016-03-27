@@ -77,6 +77,7 @@ return [
     'update_profile' => 'Editar Perfil',
     'password' => 'Contraseña',
     'confirm_password' => 'Confirmar contraseña',
-    'success_update' => 'Informacion Actualizada Correctamente'
+    'success_update' => 'Informacion Actualizada Correctamente',
+    'success_delete' => 'Eliminacion realizada con exito'
 
 ];
