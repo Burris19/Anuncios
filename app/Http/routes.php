@@ -32,6 +32,7 @@ Route::group(['namespace' => 'Frontend'], function() {
 Route::group(['prefix' => 'admin'], function () {
 
     Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
+//        Route::group(['namespace' => 'Admin'], function () {
         Route::get('/', 'HomeController@index');
         resource('configure-principal', 'ConfigurePrincipal');
         resource('configure-seo', 'ConfigureSeo');

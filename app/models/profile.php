@@ -20,7 +20,7 @@ class profile extends Model
         'deluxe_escort',
         'featured_escort',
         'category',
-        'pryce',
+        'price',
         'nationality',
         'languages',
         'sexual_orientation',

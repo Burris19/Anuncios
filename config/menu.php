@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'configure-principal' => 'Principal',
-    'configure-seo' => 'SEO',
-    'configure-column-one' => 'Links Primera Columna',
-    'configure-column-two' => 'Links Segunda Columna',
-    'configure-column-tree' => 'Links Tercera Columna',
-    'configure-banner' => 'Banners',
-    'configure-slide-show' => 'Slider'
+    'configure-principal' => 'label.principal',
+    'configure-seo' => 'label.SEO',
+    'configure-column-one' => 'label.Links_first_column',
+    'configure-column-two' => 'label.Links_second_column',
+    'configure-column-tree' => 'label.Links_third_column',
+    'configure-banner' => 'label.banners',
+    'configure-slide-show' => 'label.slider'
 ];
