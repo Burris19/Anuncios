@@ -1,19 +1,17 @@
-
     <header class="page-header">
-        <h2>Form Wizard</h2>
+        <h2>{!! trans('label.admin') !!}</h2>
 
         <div class="right-wrapper pull-right">
             <ol class="breadcrumbs">
                 <li>
-                    <a href="index.html">
+                    <a href="/admin">
                         <i class="fa fa-home"></i>
                     </a>
                 </li>
-                <li><span>Forms</span></li>
-                <li><span>Wizard</span></li>
+                <li><span>{!! trans('label.profile_new') !!}</span></li>
             </ol>
 
-            <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+            <a class="sidebar-right-toggle" data-open="#"><i class="fa fa-chevron-left"></i></a>
         </div>
     </header>
 
@@ -61,7 +59,7 @@
                                     {!! trans('label.') !!}
                                     @include('admin.profiles.input.photos')
 
-                                    <button type="submit" id="SendProfile">
+                                    <button type="submit" style="display: none" id="SendProfile">
                                         enviar informacion
                                     </button>
                                 </div>
@@ -73,13 +71,13 @@
                 <div class="panel-footer">
                     <ul class="pager">
                         <li class="previous disabled">
-                            <a><i class="fa fa-angle-left"></i> Previous</a>
+                            <a><i class="fa fa-angle-left"></i> {!! trans('label.previous') !!}</a>
                         </li>
                         <li class="finish hidden pull-right">
-                            <a id="finishProfileCreate">Finish</a>
+                            <a id="finishProfileCreate">{!! trans('label.finish') !!}</a>
                         </li>
                         <li class="next">
-                            <a>Next <i class="fa fa-angle-right"></i></a>
+                            <a>{!! trans('label.next') !!} <i class="fa fa-angle-right"></i></a>
                         </li>
                     </ul>
                 </div>

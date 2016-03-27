@@ -2,7 +2,7 @@
 
     <div class="sidebar-header">
         <div class="sidebar-title">
-            Menú
+            {!! trans('label.menu') !!}
         </div>
         <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
             <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
@@ -14,21 +14,21 @@
             <nav id="menu" class="nav-main" role="navigation">
                 <ul class="nav nav-main">
                     <li class="nav-active">
-                        <a href="index.html">
+                        <a href="/admin">
                             <i class="fa fa-home" aria-hidden="true"></i>
-                            <span>Inicio</span>
+                            <span>{!! trans('label.home') !!}</span>
                         </a>
                     </li>
                     <li class="nav-parent">
                         <a>
                             <i class="fa fa-cogs" aria-hidden="true"></i>
-                            <span>Configuración</span>
+                            <span>{!! trans('label.setting') !!}</span>
                         </a>
                         <ul class="nav nav-children">
                             @foreach(config('menu') as $key => $value )
                                 <li>
                                     <a href="{{ $key }}" class="index">
-                                        {{ $value }}
+                                        {{ trans($value) }}
                                     </a>
                                 </li>
                             @endforeach
@@ -37,29 +37,25 @@
                     <li class="nav-parent">
                         <a>
                             <i class="fa fa-copy" aria-hidden="true"></i>
-                            <span>Perfiles</span>
+                            <span>{!! trans('label.profile') !!}</span>
                         </a>
                         <ul class="nav nav-children">
-
-                                <li>
-                                    <a href="profiles/create" class="index">
-                                        Crear Perfil
-                                    </a>
-                                </li>
-
                             <li>
-                                <a href="/admin/profiles" >
-                                    Ver todos
+                                <a href="profiles/create" class="index">
+                                    {!! trans('label.profile_new') !!}
                                 </a>
                             </li>
-
-
+                            <li>
+                                <a href="/admin/profiles" >
+                                    {!! trans('label.all_profile') !!}
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="http://www.escortsinmallorca.com" target="_blank">
+                        <a href='/' target="_blank">
                             <i class="fa fa-external-link" aria-hidden="true"></i>
-                            <span>Front-End <em class="not-included">(visualizar web)</em></span>
+                            <span>{!! trans('label.front-end') !!}</span>
                         </a>
                     </li>
                 </ul>

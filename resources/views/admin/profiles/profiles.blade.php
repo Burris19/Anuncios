@@ -2,16 +2,16 @@
 
 @section('containerBody')
     <header class="page-header">
-        <h2>Administración</h2>
+        <h2>{!! trans('label.admin') !!}</h2>
 
         <div class="right-wrapper pull-right">
             <ol class="breadcrumbs">
                 <li>
-                    <a href="index.html">
+                    <a href="/admin">
                         <i class="fa fa-home"></i>
                     </a>
                 </li>
-                <li><span>Perfiles</span></li>
+                <li><span>{!! trans('label.profile') !!}</span></li>
             </ol>
 
             <a class="sidebar-right-toggle" data-open="#"><i class="fa fa-chevron-left"></i></a>
@@ -62,15 +62,17 @@
                                     </a>
                                     <div class="mg-thumb-options">
                                         <div class="mg-zoom"><i class="fa fa-search"></i></div>
-                                        <div class="mg-toolbar">
-                                            <a href="#" style="color: white"><i class="fa fa-pencil"></i> Editar</a>
-                                            <a href="#" style="color: white"><i class="fa fa-trash-o"></i> Borrar</a>
-                                        </div>
+                                        {{--<div class="mg-toolbar">--}}
+                                            {{--<a href="#" data-id="{!! $value->id !!}" style="color: white" class="updateProfile"><i class="fa fa-pencil"></i> Editar</a>--}}
+                                            {{--<a href="#" style="color: white" data-id="{!! $value->id !!}"><i class="fa fa-trash-o"></i> Borrar</a>--}}
+                                        {{--</div>--}}
                                     </div>
                                 </div>
                                 <h5 class="mg-title text-weight-semibold">{!! $value->name !!}</h5>
                                 <div class="mg-description">
-                                    <small class="pull-left text-muted">{!! $value->category !!}</small>
+                                    <strong class="pull-left text-muted">{!! $value->category !!} &nbsp</strong>
+                                     <a href="/admin/profiles/" data-id="{!! $value->id !!}" class="updateProfile"><i class="fa fa-pencil"></i> Editar</a>
+                                     <a href="/admin/profiles/" data-id="{!! $value->id !!}" class="deleteProfile"><i class="fa fa-trash-o"></i> Borrar</a>
                                 </div>
                             </div>
                         </div>
@@ -80,6 +82,10 @@
         </div>
     </section>
 
+    <div id="modalDiv">
+
+    </div>
+
 @endsection
 
 @section('other-script')
@@ -87,5 +93,32 @@
     <script type="text/javascript" src="{!! asset('assets/javascripts/examples.mediagallery.js') !!}"></script>
     <script type="text/javascript" src="{!! asset('assets/javascripts/isotope.js') !!}"></script>
     <script type="text/javascript" src="{!! asset('assets/javascripts/bootstrap-datepicker.js') !!}"></script>
+    <script>
 
+        $('.updateProfile').on('click', function(e){
+            e.preventDefault();
+            var id = $(this).data('id');
+            var urlBase = $(this).attr('href');
+            var url = urlBase + id + '/edit';
+
+            $('#modalDiv').load(url, function(){
+                $('#myModal').modal('show');
+
+            });
+
+        });
+
+        $('.deleteProfile').on('click', function(e){
+            e.preventDefault();
+
+            var id = $(this).data('id');
+            var urlBase = $(this).attr('href');
+            var url = urlBase + '/' + id ;
+
+            $('#modalDiv').load(url, function(){
+                $('#myModal').modal('show');
+            });
+        });
+
+    </script>
 @endsection

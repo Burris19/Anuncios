@@ -17,10 +17,10 @@
             <div class="header-right">
 
                 <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="assets-frontend/images/icons/languages.png" alt="English"> <span class="fa fa-angle-down"></span></button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img @if( \Config::get('app.locale') == 'es' ) src="/assets-frontend/images/icons/es.png" @else src="/assets-frontend/images/icons/en.png" @endif   width="40" height="30" > <span class="fa fa-angle-down"></span></button>
                     <ul class="dropdown-menu start-right" role="menu">
-                        <li><a href="/admin/locale?locale=en"><img src="assets-frontend/images/icons/en.png" alt="English" width="40" height="30"> {!! trans('label.english') !!}</a></li>
-                        <li><a href="/admin/locale?locale=es"><img src="assets-frontend/images/icons/es.png" alt="Español" width="40" height="30"> {!! trans('label.spanish') !!}</a></li>
+                        <li><a href="/admin/locale?locale=en"><img src="/assets-frontend/images/icons/en.png" alt="English" width="40" height="30"> {!! trans('label.english') !!}</a></li>
+                        <li><a href="/admin/locale?locale=es"><img src="/assets-frontend/images/icons/es.png" alt="Español" width="40" height="30"> {!! trans('label.spanish') !!}</a></li>
                     </ul>
                 </div>
 
@@ -32,9 +32,9 @@
                         <figure class="profile-picture">
                             <img src="/assets/imgProfiles/{{Auth::user()->photo}}" alt="Administrador" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
                         </figure>
-                        <div class="profile-info" data-lock-name="Administrador" data-lock-email="info@escortsinmallorca.com">
-                            <span class="name">Escorts in Mallorca</span>
-                            <span class="role">administrador</span>
+                        <div class="profile-info">
+                            <span class="name">{!! Auth::user()->name !!}</span>
+                            {{--<span class="role">administrador</span>--}}
                         </div>
 
                         <i class="fa custom-caret"></i>
@@ -44,10 +44,10 @@
                         <ul class="list-unstyled">
                             <li class="divider"></li>
                             <li>
-                                <a class="index" href="configure-profile/{{Auth::user()->id}}/edit"><i class="fa fa-gear"></i> Configurar</a>
+                                <a class="index" href="configure-profile/{{Auth::user()->id}}/edit"><i class="fa fa-gear"></i> {!! trans('label.setting') !!}</a>
                             </li>
                             <li>
-                                <a role="menuitem" tabindex="-1" href="/admin/logout"><i class="fa fa-power-off"></i> Cerrar</a>
+                                <a role="menuitem" tabindex="-1" href="/admin/logout"><i class="fa fa-power-off"></i> {!! trans('label.logout') !!}</a>
                             </li>
                         </ul>
                     </div>
@@ -61,8 +61,8 @@
 
             @include('admin.base.helpsLayout.menu')
             <section role="main" class="content-body" id="containerBase">
-                {{--@include('admin.partials.status')--}}
-                {{--@include('admin.partials.errors')--}}
+                @include('admin.partials.status')
+                @include('admin.partials.errors')
                 @yield('containerBody')
             </section>
         </div>
