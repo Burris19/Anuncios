@@ -25,7 +25,7 @@ class Profile extends Migration
             $table->string('deluxe_escort');
             $table->string('featured_escort');
             $table->string('category');
-            $table->string('pryce');
+            $table->string('price');
             $table->string('nationality');
             $table->string('languages');
             $table->string('sexual_orientation');
