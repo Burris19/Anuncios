@@ -54,6 +54,25 @@ return [
     'description_metatags' => 'Descricion Metatags',
     'personal_information' => 'Informacion Personal',
     'instructions' => 'Llene los campos en español',
-    'instructions_english' => 'Llene los campos en ingles'
+    'instructions_english' => 'Llene los campos en ingles',
+    'setting' => 'Configuraciones',
+    'logout' => 'Salir',
+    'menu' => 'Menú',
+    'home' => 'Inicio',
+    'principal' => 'Principal',
+    'SEO' => 'SEO',
+    'Links_first_column' => 'Enlaces primera columna',
+    'Links_second_column' => 'Enlaces segunda columna',
+    'Links_third_column' => 'Enlaces tercer columna',
+    'banners' => 'Banners',
+    'slider' => 'Slider',
+    'all_profile' => 'Ver Perfiles',
+    'front-end' => 'Ver web',
+    'admin' => 'Administración',
+    'principal_setting' => 'Configuración principal',
+    'title_sliders' => 'Configuracion Sliders',
+    'previous' => 'Atras',
+    'finish' => 'Confirmar',
+    'next' => 'Siguiente'
 
 ];

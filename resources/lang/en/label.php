@@ -54,9 +54,26 @@ return [
     'description_metatags' => 'Description Metatags',
     'personal_information' => 'Personal Information',
     'instructions' => 'Fill in the fields in Spanish',
-    'instructions_english' => 'Please fill in English'
-
-
+    'instructions_english' => 'Please fill in English',
+    'setting' => 'Setting',
+    'logout' => 'Logout',
+    'menu' => 'Menu',
+    'home' => 'Home',
+    'principal' => 'Principal',
+    'SEO' => 'SEO',
+    'Links_first_column' => 'Links first column',
+    'Links_second_column' => 'Links second column',
+    'Links_third_column' => 'Links third column',
+    'banners' => 'Banners',
+    'slider' => 'Slider',
+    'all_profile' => 'All profiles',
+    'front-end' => 'Front-End (Show Web)',
+    'admin' => 'Administrator',
+    'principal_setting' => 'Principal Setting',
+    'title_sliders' => 'Settings Sliders',
+    'previous' => 'Previous',
+    'finish' => 'Finish',
+    'next' => 'Next'
 
 
 ];
