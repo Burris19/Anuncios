@@ -6,34 +6,34 @@
                 <div class="panel-actions">
                     <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
                 </div>
-                <h2 class="panel-title">Editar Perfil</h2>
+                <h2 class="panel-title">{!! trans('label.update_profile') !!}</h2>
             </header>
             <div class="panel-body">
                 
                 {!!Form::model($user, ['route' => ['admin.configure-profile.update', $user->id], 'method' => 'PUT', 'files' => true, 'class' => 'sendEdit'])!!}
 
                     <div class="form-group">
-                        <label for="name">Nombre</label>
+                        <label for="name">{!! trans('label.name_profile') !!}</label>
                         {!!Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Nombre', 'required' => 'required'])!!}
                     </div>
 
                     <div class="form-group">
-                        <label for="password">Contraseña</label>
+                        <label for="password">{!! trans('label.password') !!}</label>
                         {!!Form::password('password', ['class' => 'form-control', 'placeholder' => 'Contraseña', 'id' => 'pass'])!!}
                     </div>
 
                     <div class="form-group">
-                        <label for="password_confirmation">Confirmacion Contraseña</label>
+                        <label for="password_confirmation">{!! trans('label.confirm_password') !!}</label>
                         {!!Form::password('password_confirmation', ['class' => 'form-control', 'placeholder' => 'Confirmacion Contraseña', 'id' => 'passVerify'])!!}
                     </div>
 
                     <div class="form-group">
-                        {!!Form::label('photo', 'Foto')!!}
+                        {!!Form::label('photo', trans('photo'))!!}
                         {!!Form::file('photo')!!}
                     </div>
 
                     <br>
-                    {!!Form::submit('Editar', ['class' => 'btn btn-primary'])!!}
+                    {!!Form::submit(trans('label.save'), ['class' => 'btn btn-primary'])!!}
 
                 {!!Form::close()!!}
                 

@@ -73,7 +73,12 @@ return [
     'title_sliders' => 'Settings Sliders',
     'previous' => 'Previous',
     'finish' => 'Finish',
-    'next' => 'Next'
+    'next' => 'Next',
+    'update_profile' => 'Update Profile',
+    'password' => 'Password',
+    'confirm_password' => 'Confirm Password',
+    'success_update' => 'Information Update Success'
+
 
 
 ];

@@ -73,6 +73,10 @@ return [
     'title_sliders' => 'Configuracion Sliders',
     'previous' => 'Atras',
     'finish' => 'Confirmar',
-    'next' => 'Siguiente'
+    'next' => 'Siguiente',
+    'update_profile' => 'Editar Perfil',
+    'password' => 'Contraseña',
+    'confirm_password' => 'Confirmar contraseña',
+    'success_update' => 'Informacion Actualizada Correctamente'
 
 ];

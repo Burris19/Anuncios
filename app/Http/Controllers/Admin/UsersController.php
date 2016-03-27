@@ -75,11 +75,13 @@ class UsersController extends Controller
      */
     public function update(UserEditRequest $request, $id)
     {
+
+
         $user = User::findOrFail($id);
         $user->fill($request->all());
         $user->save();
 
-        return \Redirect::back()->with('status', 'Modificacion Realizada Correctamente');  
+        return redirect()->to('/admin')->with('status',trans('label.success_update'));
     }
 
     /**
