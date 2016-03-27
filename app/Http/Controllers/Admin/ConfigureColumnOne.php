@@ -35,7 +35,7 @@ class ConfigureColumnOne extends BaseController
 
     protected function getModel()
 	{
-	       return new columnOne();
+        return new columnOne();
 	}
 
 }
