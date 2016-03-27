@@ -7,7 +7,7 @@
                         <img src="{!! $banner->photo !!}" alt="">
                         <div class="magnifier">
                             <div class="visible-buttons">
-                                <a title="{!! $banner->name !!}" href="{!! $banner->URL !!}"><i class="fa fa-link"></i></a>
+                                <a title="{!! $banner->name !!}" href="{!! $banner->URL !!}" title="{!! $banner->URL !!}" target="_blank"><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                     </div>

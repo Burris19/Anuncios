@@ -25,7 +25,7 @@
                         <div class="media">
                             <div class="media-body">
                                 @foreach($column1 as $column)
-                                    <h4 class="media-heading"><a href="{!! $column->URL !!}" title="">{!! $column->name !!}</a></h4>
+                                    <h4 class="media-heading"><a href="{!! $column->URL !!}" title="{!! $column->URL !!}" target="_blank">{!! $column->name !!}</a></h4>
                                 @endforeach
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                         <div class="media">
                             <div class="media-body">
                                 @foreach($column2 as $column)
-                                    <h4 class="media-heading"><a href="{!! $column->URL !!}" title="">{!! $column->name !!}</a></h4>
+                                    <h4 class="media-heading"><a href="{!! $column->URL !!}" title="{!! $column->URL !!}" target="_blank">{!! $column->name !!}</a></h4>
                                 @endforeach
 
                             </div>
@@ -56,7 +56,7 @@
                         <div class="media">
                             <div class="media-body">
                                 @foreach($column3 as $column)
-                                    <h4 class="media-heading"><a href="{!! $column->URL !!}" title="">{!! $column->name !!}</a></h4>
+                                    <h4 class="media-heading"><a href="{!! $column->URL !!}" title="{!! $column->URL !!}" target="_blank">{!! $column->name !!}</a></h4>
                                 @endforeach
                             </div>
                         </div>
