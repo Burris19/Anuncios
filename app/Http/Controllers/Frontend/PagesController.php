@@ -39,15 +39,12 @@ class PagesController extends Controller
         $column2 = columnTwo::all();
         $column3 = columnTree::all();
 
-        $profile = DB::table('profile')
-                    ->join('image_profile', 'profile.id', '=', 'image_profile.profile_id')
-                    ->where('profile.code', $code)
-                    ->orderBy('profile.id', 'asc')
-                    ->get();
+        $profile = profile::with('images')
+                        ->where('profile.code', $code)
+                        ->orderBy('profile.id', 'asc')
+                        ->get();
 
         return view('frontend.profiles.baseProfiles', compact('profile', 'principal', 'column1', 'column2', 'column3'));
-
-        // return $this->base('profiles', 'baseProfiles');
     }
 
     protected function base($folder, $view){

@@ -54,7 +54,7 @@
                 </div><!-- end col -->
 
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <img src="/{{ $profile[0]->url1 }}" alt="" class="img-fullwidth wow slideInRight">
+                    <img src="/{{ $profile[0]->images->url1 }}" alt="" class="img-fullwidth wow slideInRight">
                 </div><!-- end col -->
             </div><!-- end row -->
         </div><!-- end container -->
@@ -114,6 +114,8 @@
         </div><!-- end container -->
     </section><!-- end section -->
 
+    @include('frontend.base.imagesProfiles')
+
 </div>
 <div id="w2-english" class="tab-pane">
     
@@ -172,7 +174,7 @@
                 </div><!-- end col -->
 
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <img src="/{{ $profile[0]->url1 }}" alt="" class="img-fullwidth wow slideInRight">
+                    <img src="/{{ $profile[0]->images->url1 }}" alt="" class="img-fullwidth wow slideInRight">
                 </div><!-- end col -->
             </div><!-- end row -->
         </div><!-- end container -->
@@ -231,5 +233,7 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </section><!-- end section -->
+
+    @include('frontend.base.imagesProfiles')
 
 </div>
