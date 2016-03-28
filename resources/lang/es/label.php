@@ -78,6 +78,9 @@ return [
     'password' => 'Contraseña',
     'confirm_password' => 'Confirmar contraseña',
     'success_update' => 'Informacion Actualizada Correctamente',
-    'success_delete' => 'Eliminacion realizada con exito'
+    'success_delete' => 'Eliminacion realizada con exito',
+    'description_photo' => 'Seleccione las fotos para mostrar en su perfil',
+    'check_photos' => 'Fotos estan verificadas',
+    'state_profile' => 'Estado del perfil'
 
 ];

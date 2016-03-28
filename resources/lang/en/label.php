@@ -78,7 +78,11 @@ return [
     'password' => 'Password',
     'confirm_password' => 'Confirm Password',
     'success_update' => 'Information Update Success',
-    'success_delete' => 'Delete success'
+    'success_delete' => 'Delete success',
+    'description_photo' => 'Select the photos to display on your profile',
+    'check_photos' => 'Photos verified ?',
+    'state_profile' => 'State Profile'
+
 
 
 
