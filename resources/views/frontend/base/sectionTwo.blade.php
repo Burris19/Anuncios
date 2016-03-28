@@ -10,22 +10,22 @@
 
         <div class="row">
 
-            {{--@foreach()--}}
+            @foreach($escortFeatured as $profile)
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="team-member">
                     <div class="entry">
-                        <img src="assets-frontend/upload/team_01.jpg" alt="">
+                        <img src="/{!! $profile->images['url1'] !!}" alt="">
                         <div class="magnifier">
                             <div class="visible-buttons">
-                                <a title="" href="#"><i class="fa fa-heart-o"></i></a>
+                                <a title="" href="/profile/{!! $profile->code !!}"><i class="fa fa-heart-o"></i></a>
                             </div><!-- end buttons -->
                         </div><!-- end magnifier -->
                     </div><!-- end entry -->
-                    <h3>Josephine</h3>
-                    <small>Escort deluxe</small>
+                    <h3>{!! $profile->name !!}</h3>
+                    <small>Escort Destacada</small>
                 </div><!-- end team-member -->
             </div><!-- end col -->
-            {{--@endforeach--}}
+            @endforeach
 
         </div><!-- end row -->
     </div><!-- end container -->

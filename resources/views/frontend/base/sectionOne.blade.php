@@ -1,3 +1,4 @@
+{{--Escort Deluxe--}}
 <section class="section white">
     <div class="container">
         <div class="big-title text-center">
@@ -8,22 +9,22 @@
         <hr class="invis">
         <div class="row">
 
-            {{--@foreach()--}}
+            @foreach($escortDelux as $profile)
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="team-member">
                         <div class="entry">
-                            <img src="assets-frontend/upload/team_01.jpg" alt="">
+                            <img src="/{!! $profile->images['url1'] !!}" alt="">
                             <div class="magnifier">
                                 <div class="visible-buttons">
-                                    <a title="" href="#"><i class="fa fa-heart-o"></i></a>
+                                    <a title="{!! $profile->name !!}" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-heart-o"></i></a>
                                 </div><!-- end buttons -->
                             </div><!-- end magnifier -->
                         </div><!-- end entry -->
-                        <h3>Josephine</h3>
+                        <h3>{!! $profile->name !!}</h3>
                         <small>Escort deluxe</small>
                     </div><!-- end team-member -->
                 </div>
-            {{--@endforeach--}}
+            @endforeach
 
         </div>
     </div>
