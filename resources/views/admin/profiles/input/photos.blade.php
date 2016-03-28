@@ -1,3 +1,16 @@
+{!! trans('label.description_photo') !!}
+<div class="row">
+    <div class="row col-md-6">
+        <label class="col-xs-4 control-label mt-xs pt-none">{!! trans('label.check_photos') !!}</label>
+        <div class="col-md-2">
+            <div class="checkbox-custom checkbox-default checkbox-inline mt-xs">
+                <input type="checkbox" name="check_photos">
+                <label for="profileDeluxe"></label>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="tab-pane" id = "archivos">
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1">

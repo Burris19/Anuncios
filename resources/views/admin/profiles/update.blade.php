@@ -53,7 +53,6 @@
                                         @include('admin.profiles.input.input-edit.inputTwoo')
                                     </div>
                                     <div id="w2-photos" class="tab-pane">
-                                        {!! trans('label.') !!}
                                         @include('admin.profiles.input.input-edit.photos')
 
                                         <button type="submit" id="SendProfile" style="display: none">
@@ -82,20 +81,6 @@
                     </div>
                 </div>
 
-
-
-                {{-- Finish Wizar--}}
-
-
-
-
-
-
-
-
-
-
-
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">{!! trans('label.cancel') !!}</button>
@@ -121,16 +106,6 @@
 
         $w2finish.on('click', function( ev ) {
             ev.preventDefault();
-
-
-//                alert('tienes que llenar los campos a pura verga');
-//                    new PNotify({
-//                        title: 'Congratulations',
-//                        text: 'You completed the wizard form.',
-//                        type: 'custom',
-//                        addclass: 'notification-success',
-//                        icon: 'fa fa-check'
-//                    });
 
         });
 
@@ -201,6 +176,64 @@
         e.preventDefault();
         $('#SendProfile').click();
     })
+
+    $('.name').focusout(function(e){
+        var value = $(this).val();
+        $('.name').val(value)
+    });
+
+
+    $('.age').focusout(function(e){
+        var value = $(this).val();
+        $('.age').val(value)
+    });
+
+    $('.phone').focusout(function(e){
+        var value = $(this).val();
+        $('.phone').val(value)
+    });
+
+    $('.measurements').focusout(function(e){
+        var value = $(this).val();
+        $('.measurements').val(value)
+    });
+
+    $('.height').focusout(function(e){
+        var value = $(this).val();
+        $('.height').val(value)
+    });
+
+    $('.category').focusout(function(e){
+        var value = $(this).val();
+        $('.category').val(value)
+    });
+
+    $('.deluxe_escort33').change(function(e){
+
+        var state = $(this).is(":checked");
+
+        if(state == false ){
+            $('.deluxe_escort33').removeAttr('checked');
+        }else {
+            $(".deluxe_escort33").prop('checked', true);
+        }
+    });
+
+    $('.featured_escort444').change(function(e){
+
+        var state = $(this).is(":checked");
+
+        if(state == false ){
+            $('.featured_escort444').removeAttr('checked');
+        }else {
+            $(".featured_escort444").prop('checked', true);
+        }
+    });
+
+    $('.price').focusout(function(e){
+        var value = $(this).val();
+        $('.price').val(value)
+    });
 
 
 </script>

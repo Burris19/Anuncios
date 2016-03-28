@@ -1,7 +1,7 @@
 <fieldset>
     <div class="row">
         <div class="row col-md-12">
-            <label class="col-md-2 control-label" for="inputSuccess">Estado Perfil</label>
+            <label class="col-md-2 control-label" for="inputSuccess">{!! trans('label.state_profile') !!}</label>
             <div class="col-md-10">
                 <div class="radio col-md-5">
                     <label>
@@ -24,13 +24,13 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileName">{!! trans('label.name_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control"  name="name2" placeholder="Valentina Perez"  >
+                <input type="text" class="form-control name"  name="name2" placeholder="Valentina Perez"  >
             </div>
         </div>
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileAge">{!! trans('label.age_profile') !!}</label>
             <div class="col-md-8">
-                <input type="number" class="form-control" name="age2"  placeholder="22"  >
+                <input type="text" class="form-control age" name="age2"  placeholder="22"  >
             </div>
         </div>
     </div>
@@ -44,14 +44,14 @@
                 <span class="input-group-addon">
                     <i class="fa fa-phone"></i>
                 </span>
-                    <input type="number" class="form-control" placeholder="111 111 111" name="phone2"  >
+                    <input type="text" class="form-control phone" placeholder="111 111 111" name="phone2"  >
                 </div>
             </div>
         </div>
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileMeasure">{!! trans('label.measurements_profile') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control"  name="measurements2" placeholder="90-60-90"  >
+                <input type="text" class="form-control measurements"  name="measurements2" placeholder="90-60-90"  >
             </div>
         </div>
     </div>
@@ -61,13 +61,13 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profileHeight">{!! trans('label.height') !!}</label>
             <div class="col-md-8">
-                <input type="text" class="form-control"  name="height2" placeholder="165"  >
+                <input type="text" class="form-control height"  name="height2" placeholder="165"  >
             </div>
         </div>
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="inputSuccess">{!! trans('label.category_profile') !!}</label>
             <div class="col-md-8">
-                <select class="form-control mb-md" name="category2">
+                <select class="form-control mb-md category" name="category2">
                     <option value="escorts">Escorts</option>
                     <option value="trans">Trans</option>
                     <option value="boys">Boys</option>
@@ -84,7 +84,7 @@
             <label class="col-xs-4 control-label mt-xs pt-none">{!! trans('label.escort_deluxe_profile') !!}</label>
             <div class="col-md-2">
                 <div class="checkbox-custom checkbox-default checkbox-inline mt-xs">
-                    <input type="checkbox" checked="" id="profileDeluxe" name="deluxe_escort2">
+                    <input type="checkbox" id="profileDeluxe"  class="deluxe_escort33" name="deluxe_escort2">
                     <label for="profileDeluxe"></label>
                 </div>
             </div>
@@ -93,7 +93,7 @@
             <label class="col-xs-4 control-label mt-xs pt-none">{!! trans('label.featured_escort_profile') !!}</label>
             <div class="col-md-2">
                 <div class="checkbox-custom checkbox-default checkbox-inline mt-xs">
-                    <input type="checkbox" checked="" id="profileFeatured" name="featured_escort2">
+                    <input type="checkbox" class="featured_escort444" id="profileFeatured" name="featured_escort2">
                     <label for="profileFeatured"></label>
                 </div>
             </div>
@@ -105,7 +105,7 @@
         <div class="row col-md-6">
             <label class="col-md-4 control-label" for="profilePrice">{!! trans('label.pryce_profile') !!}</label>
             <div class="col-md-8">
-                <input type="number" class="form-control" name="price2" placeholder="125">
+                <input type="text" class="form-control price" name="price2" placeholder="125">
             </div>
         </div>
         <div class="row col-md-6">
