@@ -12,6 +12,8 @@ use App\models\columnOne;
 use App\models\columnTwo;
 use App\models\columnTree;
 
+use DB;
+
 class PagesController extends Controller
 {
     function agency(){
@@ -37,9 +39,11 @@ class PagesController extends Controller
         $column2 = columnTwo::all();
         $column3 = columnTree::all();
 
-        $profile = profile::where('code', $code)
-                            ->orderBy('id', 'asc')
-                            ->get();
+        $profile = DB::table('profile')
+                    ->join('image_profile', 'profile.id', '=', 'image_profile.profile_id')
+                    ->where('profile.code', $code)
+                    ->orderBy('profile.id', 'asc')
+                    ->get();
 
         return view('frontend.profiles.baseProfiles', compact('profile', 'principal', 'column1', 'column2', 'column3'));
 

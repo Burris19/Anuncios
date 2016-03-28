@@ -7,7 +7,7 @@
                         <div class="navbar-table">
                             <div class="navbar-cell tight">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="/"><img src="assets-frontend/images/logo.png" alt="Ova"></a>
+                                    <a class="navbar-brand" href="/"><img src="/assets-frontend/images/logo.png" alt="Ova"></a>
                                     <div>
                                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
                                             <span class="sr-only">Toggle navigation</span>
