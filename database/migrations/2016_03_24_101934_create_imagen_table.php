@@ -22,6 +22,8 @@ class CreateImagenTable extends Migration
             $table->string('url4');
             $table->string('url5');
 
+            $table->string('check_photos');
+
             $table->integer('profile_id')->unsigned();
             $table->foreign('profile_id')->references('id')->on('profile');
 

@@ -19,6 +19,7 @@ class image_profile extends Model
         'url2',
         'url3',
         'url4',
-        'url5'
+        'url5',
+        'check_photos'
     ];
 }

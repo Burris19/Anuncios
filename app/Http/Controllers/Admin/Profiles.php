@@ -45,15 +45,30 @@ class Profiles extends Controller
     {
 
         $data = $request->all();
-        $data['code'] = time();
-        if( $data['is_active'] != 'true'){
-            $data['is_active'] = 'false';
+
+        if(!isset($data['deluxe_escort'])){
+            $data['deluxe_escort'] = 'of';
         }
+
+        if(!isset($data['featured_escort'])){
+            $data['featured_escort'] = 'of';
+        }
+
+        if(!isset($data['deluxe_escort2'])){
+            $data2['deluxe_escort'] = 'of';
+        }
+
+        if(!isset($data['featured_escort2'])){
+            $data2['featured_escort'] = 'of';
+        }
+
+        if(!isset($data['check_photos'])){
+            $data['check_photos'] = 'of';
+        }
+
+        $data['code'] = time();
         $spanish = profile::create($data);
         $data2['is_active'] = $data['is_active2'];
-        if( $data['is_active2'] != 'true'){
-            $data2['is_active'] = 'false';
-        }
         $data2['is_spanish'] = $data['is_spanish2'];
         $data2['code'] = $data['code'];
         $data2['name'] = $data['name2'];
@@ -62,8 +77,8 @@ class Profiles extends Controller
         $data2['phone'] = $data['phone2'];
         $data2['height'] = $data['height2'];
         $data2['measurements'] = $data['measurements2'];
-        $data2['deluxe_escort'] = $data['deluxe_escort2'];
-        $data2['featured_escort'] = $data['featured_escort2'];
+//        $data2['deluxe_escort'] = $data['deluxe_escort2'];
+//        $data2['featured_escort'] = $data['featured_escort2'];
         $data2['category'] = $data['category2'];
         $data2['price'] = $data['price2'];
         $data2['nationality'] = $data['nationality2'];
@@ -84,7 +99,7 @@ class Profiles extends Controller
 
             }
         }
-
+        $data3['check_photos'] = $data['check_photos'];
         $data3['profile_id'] = $spanish->id;
 
         $photos = image_profile::create($data3);
@@ -142,6 +157,30 @@ class Profiles extends Controller
     {
         $register = profile::findOrFail($id);
         $data = $request->all();
+
+        if(!isset($data['deluxe_escort'])){
+            $data['deluxe_escort'] = 'of';
+        }
+
+        if(!isset($data['featured_escort'])){
+            $data['featured_escort'] = 'of';
+        }
+
+        if(!isset($data['deluxe_escort2'])){
+            $data2['deluxe_escort'] = 'of';
+        }
+
+        if(!isset($data['featured_escort2'])){
+            $data2['featured_escort'] = 'of';
+        }
+
+        if(!isset($data['check_photos'])){
+            $data['check_photos'] = 'of';
+        }
+
+
+
+
         if($register){
             $dataSpanish = profile::where('code','=', $register->code)->where('is_spanish','=','true')->first();
 
@@ -151,9 +190,6 @@ class Profiles extends Controller
             $dataEnglish = profile::where('code','=', $register->code)->where('is_spanish','=','false')->first();
 
             $data2['is_active'] = $data['is_active2'];
-            if( $data['is_active2'] != 'true'){
-                $data2['is_active'] = 'false';
-            }
             $data2['is_spanish'] = $data['is_spanish2'];
             $data2['name'] = $data['name2'];
             $data2['description'] = $data['description2'];
@@ -161,8 +197,8 @@ class Profiles extends Controller
             $data2['phone'] = $data['phone2'];
             $data2['height'] = $data['height2'];
             $data2['measurements'] = $data['measurements2'];
-            $data2['deluxe_escort'] = $data['deluxe_escort2'];
-            $data2['featured_escort'] = $data['featured_escort2'];
+//            $data2['deluxe_escort'] = $data['deluxe_escort2'];
+//            $data2['featured_escort'] = $data['featured_escort2'];
             $data2['category'] = $data['category'];
             $data2['price'] = $data['price2'];
             $data2['nationality'] = $data['nationality2'];
@@ -180,7 +216,6 @@ class Profiles extends Controller
 
             $photos = image_profile::where('profile_id', '=', $dataSpanish->id )->first();
 
-
             for($i= 1; $i <6; $i++){
                 if(isset($data['input'.$i])) {
                     $image = UploadX::uploadFile($data['input'.$i],'profile', $i.time());
@@ -189,6 +224,9 @@ class Profiles extends Controller
                     $data3['url'.$i] = $photos['url'.$i];
                 }
             }
+
+            $data3['check_photos'] = $data['check_photos'];
+
 
             $photos->update($data3);
             $photos->save();
