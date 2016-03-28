@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\models\profile;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -22,13 +23,17 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $escortDelux = profile::where('deluxe_escort', '=', 'on')->get();
+        $escortFeatured = profile::where('featured_escort', '=', 'on')->get();
+        $escortNovelties = profile::orderBy('created_at', 'desc')->take(1)->get();
+
         $principal = principal::first();
         $column1 = columnOne::all();
         $column2 = columnTwo::all();
         $column3 = columnTree::all();
         $banners = banners::all();
         $sliders = sliders::all();
-        return view('frontend.index.index', compact('principal', 'column1', 'column2', 'column3','banners', 'sliders'));
+        return view('frontend.index.index', compact('principal', 'column1', 'column2', 'column3','banners', 'sliders', 'escortDelux', 'escortFeatured', 'escortNovelties'));
     }
 
 
