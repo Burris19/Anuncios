@@ -22,7 +22,7 @@
                             </div><!-- end magnifier -->
                         </div><!-- end entry -->
                         <h3>{!! $profile->name !!}</h3>
-                        <small>Escort deluxe</small>
+                        <small>Escort Destacadas</small>
                     </div><!-- end team-member -->
                 </div>
             @endforeach

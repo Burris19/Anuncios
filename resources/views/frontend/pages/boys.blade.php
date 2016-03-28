@@ -13,21 +13,21 @@
 
                 <div class="row">
 
-                    {{--@foreach()--}}
+                    @foreach($boys as $profile)
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="team-member">
                                 <div class="entry">
-                                    <img src="upload/team_01.jpg" alt="">
+                                    <img src="/{!! $profile->images['url1'] !!}" alt="">
                                     <div class="magnifier">
                                         <div class="visible-buttons">
-                                            <a title="" href="#"><i class="fa fa-heart-o"></i></a>
+                                            <a title="{!! $profile->name !!}" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-heart-o"></i></a>
                                         </div><!-- end buttons -->
                                     </div><!-- end magnifier -->
                                 </div><!-- end entry -->
-                                <h3>Robert</h3>
+                                <h3>{!! $profile->name !!}</h3>
                             </div><!-- end team-member -->
-                        </div><!-- end col -->
-                    {{--@endforeach--}}
+                        </div>
+                    @endforeach
 
                 </div><!-- end row -->
             </div><!-- end container -->
@@ -43,18 +43,18 @@
             <div class="container">
                 <div id="owl-portfolio" class="owl-custom">
 
-                    {{--@foreach()--}}
+                    @foreach($boysAll as $profile)
                         <div class="owl-item">
                             <div class="entry">
-                                <img src="upload/banner_01.jpg" alt="">
+                                <img src="/{!! $profile->images['url1'] !!}" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
-                                        <a title="" href="#"><i class="fa fa-link"></i></a>
+                                        <a title="{!! $profile->name !!}" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-link"></i></a>
                                     </div><!-- end buttons -->
                                 </div><!-- end magnifier -->
                             </div><!-- end entry -->
                         </div><!-- end owl-item -->
-                    {{--@endforeach--}}
+                    @endforeach
 
                 </div><!-- end row -->
             </div><!-- end container -->

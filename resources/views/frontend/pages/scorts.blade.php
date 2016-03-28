@@ -16,22 +16,22 @@
 
             <div class="row">
 
-                {{--@foreach()--}}
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="team-member">
-                            <div class="entry">
-                                <img src="upload/team_01.jpg" alt="">
-                                <div class="magnifier">
-                                    <div class="visible-buttons">
-                                        <a title="" href="#"><i class="fa fa-heart-o"></i></a>
-                                    </div><!-- end buttons -->
-                                </div><!-- end magnifier -->
-                            </div><!-- end entry -->
-                            <h3>Josephine</h3>
-                            <small>Escort deluxe</small>
-                        </div><!-- end team-member -->
-                    </div>
-                {{--@endforeach--}}
+                    @foreach($escortDelux as $profile)
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+                                <div class="entry">
+                                    <img src="/{!! $profile->images['url1'] !!}" alt="">
+                                    <div class="magnifier">
+                                        <div class="visible-buttons">
+                                            <a title="{!! $profile->name !!}" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-heart-o"></i></a>
+                                        </div><!-- end buttons -->
+                                    </div><!-- end magnifier -->
+                                </div><!-- end entry -->
+                                <h3>{!! $profile->name !!}</h3>
+                                <small>Escort deluxe</small>
+                            </div><!-- end team-member -->
+                        </div>
+                    @endforeach
 
 
             </div><!-- end row -->
@@ -48,23 +48,22 @@
             <hr class="invis">
 
             <div class="row">
-                {{--@endforeach()--}}
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member">
-                        <div class="entry">
-                            <img src="upload/team_01.jpg" alt="">
-                            <div class="magnifier">
-                                <div class="visible-buttons">
-                                    <a title="" href="#"><i class="fa fa-heart-o"></i></a>
-                                </div><!-- end buttons -->
-                            </div><!-- end magnifier -->
-                        </div><!-- end entry -->
-                        <h3>Josephine</h3>
-                    </div><!-- end team-member -->
-                </div>
-                {{--@endforeach--}}
-
-
+                @foreach($escortFeatured as $profile)
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="team-member">
+                            <div class="entry">
+                                <img src="/{!! $profile->images['url1'] !!}" alt="">
+                                <div class="magnifier">
+                                    <div class="visible-buttons">
+                                        <a title="" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-heart-o"></i></a>
+                                    </div><!-- end buttons -->
+                                </div><!-- end magnifier -->
+                            </div><!-- end entry -->
+                            <h3>{!! $profile->name !!}</h3>
+                            <small>Escort Destacada</small>
+                        </div><!-- end team-member -->
+                    </div><!-- end col -->
+                @endforeach
             </div><!-- end row -->
         </div><!-- end container -->
     </section><!-- end section -->
@@ -78,18 +77,18 @@
     <section class="section white">
         <div class="container">
             <div id="owl-portfolio" class="owl-custom">
-                {{--@foreach()--}}
+                @foreach($escortNovelties as $profile)
                     <div class="owl-item">
                         <div class="entry">
-                            <img src="upload/banner_01.jpg" alt="">
+                            <img src="/{!! $profile->images['url1'] !!}" alt="">
                             <div class="magnifier">
                                 <div class="visible-buttons">
-                                    <a title="" href="#"><i class="fa fa-link"></i></a>
+                                    <a title="{!! $profile->name !!}" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-link"></i></a>
                                 </div><!-- end buttons -->
                             </div><!-- end magnifier -->
                         </div><!-- end entry -->
                     </div>
-                {{--@endforeach--}}
+                @endforeach
 
             </div><!-- end row -->
         </div><!-- end container -->

@@ -17,7 +17,7 @@
                         <img src="/{!! $profile->images['url1'] !!}" alt="">
                         <div class="magnifier">
                             <div class="visible-buttons">
-                                <a title="" href="/profile/{!! $profile->code !!}"><i class="fa fa-heart-o"></i></a>
+                                <a title="" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-heart-o"></i></a>
                             </div><!-- end buttons -->
                         </div><!-- end magnifier -->
                     </div><!-- end entry -->

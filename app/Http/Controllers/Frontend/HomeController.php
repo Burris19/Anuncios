@@ -23,9 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $escortDelux = profile::where('deluxe_escort', '=', 'on')->get();
-        $escortFeatured = profile::where('featured_escort', '=', 'on')->get();
-        $escortNovelties = profile::orderBy('created_at', 'desc')->take(1)->get();
+        $escortDelux = profile::where('deluxe_escort', '=', 'on')->where('is_spanish', '=', 'true')->get();
+        $escortFeatured = profile::where('featured_escort', '=', 'on')->where('is_spanish', '=', 'true')->get();
+        $escortNovelties = profile::orderBy('created_at', 'desc')->where('is_spanish', '=', 'true')->take(4)->get();
 
         $principal = principal::first();
         $column1 = columnOne::all();
