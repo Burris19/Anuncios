@@ -3,8 +3,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-left">
-                    <h1>{{$profile[0]->name}}</h1>
-                    <p>Categoria: {{$profile[0]->category}}</p>
+                    <h1>{!! $profileSpanish->name !!}</h1>
+                    <p>Categoria: {{$profileSpanish->category}}</p>
                     <p></p>
                 </div><!-- end col -->
             </div><!-- end row -->
@@ -19,7 +19,7 @@
                         <p class="lead">Impresionante escort de belleza inigualable en Mallorca.</p>
                     </div><!-- end title -->
                     <div class="text-widget">
-                        <p>{{$profile[0]->description}}.</p>
+                        <p>{{$profileSpanish->description}}.</p>
                     </div><!-- end text-widget -->
 
                     <div class="about-widget">
@@ -27,22 +27,22 @@
                         <address>
                             <i class="fa fa-phone alignleft"></i>
                             <strong>Teléfono:</strong>
-                            <p>{{$profile[0]->phone}}</p>
+                            <p>{{$profileSpanish->phone}}</p>
                         </address>
                         <address>
                             <i class="fa fa-money alignleft"></i>
                             <strong>Tarifas:</strong>
-                            <p>{{$profile[0]->price}}</p>
+                            <p>{{$profileSpanish->price}}</p>
                         </address>
                         <address>
                             <i class="fa fa-bus alignleft"></i>
                             <strong>Salidas:</strong>
-                            <p>{{$profile[0]->departures}}</p>
+                            <p>{{$profileSpanish->departures}}</p>
                         </address>
                         <address>
                             <i class="fa fa-history alignleft"></i>
                             <strong>Horario:</strong>
-                            <p>{{$profile[0]->timetable}}</p>
+                            <p>{{$profileSpanish->timetable}}</p>
                         </address>
                         <address>
                             <i class="fa fa-map-marker alignleft"></i>
@@ -54,7 +54,7 @@
                 </div><!-- end col -->
 
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <img src="/{{ $profile[0]->images->url1 }}" alt="" class="img-fullwidth wow slideInRight">
+                    <img src="/{{ $profileSpanish->images->url1 }}" alt="" class="img-fullwidth wow slideInRight">
                 </div><!-- end col -->
             </div><!-- end row -->
         </div><!-- end container -->
@@ -68,16 +68,22 @@
                         <address>
                             <i class="fa fa-heart alignleft"></i>
                             <strong>Edad:</strong>
-                            <p>{{$profile[0]->age}}</p>
+                            <p>{{$profileSpanish->age}}</p>
                         </address>
                         <address>
                             <i class="fa fa-venus-mars alignleft"></i>
                             <strong>Orientación sexual:</strong>
-                            <p>{{$profile[0]->sexual_orientation}}</p>
+                            <p>{{$profileSpanish->sexual_orientation}}</p>
                         </address>
                         <address>
                             <i class="fa fa-check alignleft"></i>
                             <strong>Fotos reales verificadas:</strong>
+                                @if($profileSpanish->images->check_photos == 'of')
+                                        <p>No</p>
+                                @else
+                                        <p>SI</p>
+                                @endif
+
                         </address>
                     </div><!-- end service-box -->
                 </div><!-- end col -->
@@ -87,11 +93,11 @@
                         <address>
                             <i class="fa fa-info alignleft"></i>
                             <strong>Medidas:</strong>
-                            <p>{{$profile[0]->measurements}}</p>
+                            <p>{{$profileSpanish->measurements}}</p>
                         </address>                          <address>
                             <i class="fa fa-info alignleft"></i>
                             <strong>Altura:</strong>
-                            <p>{{$profile[0]->height}}</p>
+                            <p>{{$profileSpanish->height}}</p>
                         </address>
                     </div><!-- end service-box -->
                 </div><!-- end col -->
@@ -101,11 +107,11 @@
                         <address>
                             <i class="fa fa-flag alignleft"></i>
                             <strong>Nacionalidad:</strong>
-                            <p>{{$profile[0]->nationality}}</p>
+                            <p>{{$profileSpanish->nationality}}</p>
                         </address>                          <address>
                             <i class="fa fa-flag-o alignleft"></i>
                             <strong>Idiomas:</strong>
-                            <p>{{$profile[0]->languages}}</p>
+                            <p>{{$profileSpanish->languages}}</p>
                         </address>
                     </div><!-- end service-box -->
                 </div><!-- end col -->
@@ -117,14 +123,18 @@
     @include('frontend.base.imagesProfiles')
 
 </div>
+
+
+
+
 <div id="w2-english" class="tab-pane">
     
     <section class="page-title grey clearfix">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-left">
-                    <h1>{{$profile[0]->name}}</h1>
-                    <p>Category: {{$profile[0]->category}}</p>
+                    <h1>{{$profileEnglish->name}}</h1>
+                    <p>Category: {{$profileEnglish->category}}</p>
                     <p></p>
                 </div><!-- end col -->
             </div><!-- end row -->
@@ -139,7 +149,7 @@
                         <p class="lead">Impresionante escort de belleza inigualable en Mallorca.</p>
                     </div><!-- end title -->
                     <div class="text-widget">
-                        <p>{{$profile[0]->description}}.</p>
+                        <p>{{$profileEnglish->description}}.</p>
                     </div><!-- end text-widget -->
 
                     <div class="about-widget">
@@ -147,22 +157,22 @@
                         <address>
                             <i class="fa fa-phone alignleft"></i>
                             <strong>Phone:</strong>
-                            <p>{{$profile[0]->phone}}</p>
+                            <p>{{$profileEnglish->phone}}</p>
                         </address>
                         <address>
                             <i class="fa fa-money alignleft"></i>
                             <strong>Price:</strong>
-                            <p>{{$profile[0]->price}}</p>
+                            <p>{{$profileEnglish->price}}</p>
                         </address>
                         <address>
                             <i class="fa fa-bus alignleft"></i>
                             <strong>Departures:</strong>
-                            <p>{{$profile[0]->departures}}</p>
+                            <p>{{$profileEnglish->departures}}</p>
                         </address>
                         <address>
                             <i class="fa fa-history alignleft"></i>
                             <strong>Timetable:</strong>
-                            <p>{{$profile[0]->timetable}}</p>
+                            <p>{{$profileEnglish->timetable}}</p>
                         </address>
                         <address>
                             <i class="fa fa-map-marker alignleft"></i>
@@ -174,7 +184,7 @@
                 </div><!-- end col -->
 
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <img src="/{{ $profile[0]->images->url1 }}" alt="" class="img-fullwidth wow slideInRight">
+                    <img src="/{{ $profileSpanish->images->url1 }}" alt="" class="img-fullwidth wow slideInRight">
                 </div><!-- end col -->
             </div><!-- end row -->
         </div><!-- end container -->
@@ -188,16 +198,21 @@
                         <address>
                             <i class="fa fa-heart alignleft"></i>
                             <strong>Age:</strong>
-                            <p>{{$profile[0]->age}}</p>
+                            <p>{{$profileEnglish->age}}</p>
                         </address>
                         <address>
                             <i class="fa fa-venus-mars alignleft"></i>
                             <strong>Sexual Orientation:</strong>
-                            <p>{{$profile[0]->sexual_orientation}}</p>
+                            <p>{{$profileEnglish->sexual_orientation}}</p>
                         </address>
                         <address>
                             <i class="fa fa-check alignleft"></i>
                             <strong>Verified Real Photos:</strong>
+                            @if($profileSpanish->images->check_photos == 'of')
+                                <p>No</p>
+                            @else
+                                <p>YES</p>
+                            @endif
                         </address>
                     </div><!-- end service-box -->
                 </div><!-- end col -->
@@ -207,11 +222,11 @@
                         <address>
                             <i class="fa fa-info alignleft"></i>
                             <strong>Medidas:</strong>
-                            <p>{{$profile[0]->measurements}}</p>
+                            <p>{{$profileEnglish->measurements}}</p>
                         </address>                          <address>
                             <i class="fa fa-info alignleft"></i>
                             <strong>Altura:</strong>
-                            <p>{{$profile[0]->height}}</p>
+                            <p>{{$profileEnglish->height}}</p>
                         </address>
                     </div><!-- end service-box -->
                 </div><!-- end col -->
@@ -221,11 +236,11 @@
                         <address>
                             <i class="fa fa-flag alignleft"></i>
                             <strong>Nacionalidad:</strong>
-                            <p>{{$profile[0]->nationality}}</p>
+                            <p>{{$profileEnglish->nationality}}</p>
                         </address>                          <address>
                             <i class="fa fa-flag-o alignleft"></i>
                             <strong>Idiomas:</strong>
-                            <p>{{$profile[0]->languages}}</p>
+                            <p>{{$profileEnglish->languages}}</p>
                         </address>
                     </div><!-- end service-box -->
                 </div><!-- end col -->

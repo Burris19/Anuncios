@@ -6,12 +6,12 @@
             <ul class="nav nav-tabs nav-justified">
                 <li class="active">
                     <a href="#w2-spanish" data-toggle="tab" class="text-center">
-                        Español
+                        {!! trans('label.spanish') !!}
                     </a>
                 </li>
                 <li>
                     <a href="#w2-english" data-toggle="tab" class="text-center">
-                        Ingles
+                        {!! trans('label.english') !!}
                     </a>
                 </li>
             </ul>
