@@ -39,12 +39,17 @@ class PagesController extends Controller
         $column2 = columnTwo::all();
         $column3 = columnTree::all();
 
-        $profile = profile::with('images')
+        $profileSpanish = profile::with('images')
                         ->where('profile.code', $code)
-                        ->orderBy('profile.id', 'asc')
-                        ->get();
+                        ->where('is_spanish', '=', 'true')
+                        ->first();
 
-        return view('frontend.profiles.baseProfiles', compact('profile', 'principal', 'column1', 'column2', 'column3'));
+        $profileEnglish = profile::where('profile.code', $code)
+                        ->where('is_spanish', '=', 'false')
+                        ->first();
+
+//        return compact('profileSpanish', 'profileEnglish');
+        return view('frontend.profiles.baseProfiles', compact('profileSpanish', 'profileEnglish', 'principal', 'column1', 'column2', 'column3'));
     }
 
     protected function base($folder, $view){
