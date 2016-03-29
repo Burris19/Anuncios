@@ -81,7 +81,9 @@ return [
     'success_delete' => 'Delete success',
     'description_photo' => 'Select the photos to display on your profile',
     'check_photos' => 'Photos verified ?',
-    'state_profile' => 'State Profile'
+    'state_profile' => 'State Profile',
+    'area' => 'Area',
+    'zona' => 'Zone'
 
 
 

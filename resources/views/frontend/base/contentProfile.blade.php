@@ -47,7 +47,12 @@
                         <address>
                             <i class="fa fa-map-marker alignleft"></i>
                             <strong>Zona:</strong>
-                            <p>Manacor</p>
+                            <p>{!! $profileSpanish->zona !!}</p>
+                        </address>
+                        <address>
+                            <i class="fa fa-map-marker alignleft"></i>
+                            <strong>Area:</strong>
+                            <p>{!! $profileSpanish->area !!}</p>
                         </address>
                     </div><!-- end about-widget -->
 
@@ -176,8 +181,13 @@
                         </address>
                         <address>
                             <i class="fa fa-map-marker alignleft"></i>
-                            <strong>Zona:</strong>
-                            <p>Manacor</p>
+                            <strong>Zone:</strong>
+                            <p>{!! $profileSpanish->zona !!}</p>
+                        </address>
+                        <address>
+                            <i class="fa fa-map-marker alignleft"></i>
+                            <strong>Area:</strong>
+                            <p>{!! $profileSpanish->area !!}</p>
                         </address>
                     </div><!-- end about-widget -->
 

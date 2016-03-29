@@ -17,21 +17,100 @@ use DB;
 class PagesController extends Controller
 {
     function agency(){
-        return $this->base('pages', 'agency');
+
+        $principal = principal::first();
+        $column1 = columnOne::all();
+        $column2 = columnTwo::all();
+        $column3 = columnTree::all();
+
+        $agency = profile::where('category', '=', 'agencias')->where('is_spanish', '=', 'true')->orderBy('created_at', 'desc')->take(5)->get();
+        $agencyAll = profile::where('category', '=', 'agencias')->where('is_spanish', '=', 'true')->orderBy('created_at', 'asc')->get();
+
+        if(isset($agency[0])){
+            $configureDescription = $agency[0]->description_metatags;
+            $keyWords = $agency[0]->key_words;
+            $titlePage = 'Agency';
+
+        }else{
+            $configureDescription = $principal->description_metatags;
+            $keyWords = $principal->key_words;
+            $titlePage = 'Agency';
+        }
+
+
+
+        return view('frontend.pages.agency', compact('principal','column1', 'column2', 'column3', 'agency', 'agencyAll', 'configureDescription', 'keyWords', 'titlePage'));
+
+
     }
 
     function boy(){
-        return $this->base('pages', 'boys');
+        $principal = principal::first();
+        $column1 = columnOne::all();
+        $column2 = columnTwo::all();
+        $column3 = columnTree::all();
+
+        $boys = profile::where('category', '=', 'boys')->where('is_spanish', '=', 'true')->orderBy('created_at', 'desc')->take(5)->get();
+        $boysAll = profile::where('category', '=', 'boys')->where('is_spanish', '=', 'true')->orderBy('created_at', 'asc')->get();
+
+        if(isset($boys[0])){
+            $configureDescription = $boys[0]->description_metatags;
+            $keyWords = $boys[0]->key_words;
+            $titlePage = 'Boys';
+        }else{
+            $configureDescription = $principal->description_metatags;
+            $keyWords = $principal->key_words;
+            $titlePage = 'Boys';
+        }
+
+        return view('frontend.pages.boys', compact('principal','column1', 'column2', 'column3', 'boys', 'boysAll', 'configureDescription', 'keyWords', 'titlePage'));
     }
 
     function trans(){
-        return $this->base('pages', 'trans');
+        $principal = principal::first();
+        $column1 = columnOne::all();
+        $column2 = columnTwo::all();
+        $column3 = columnTree::all();
+
+        $trans = profile::where('category', '=', 'trans')->where('is_spanish', '=', 'true')->orderBy('created_at', 'desc')->take(5)->get();
+        $transAll = profile::where('category', '=', 'trans')->where('is_spanish', '=', 'true')->orderBy('created_at', 'asc')->get();
+
+
+        if(isset($trans[0])){
+            $configureDescription = $trans[0]->description_metatags;
+            $keyWords = $trans[0]->key_words;
+            $titlePage = 'Trans';
+        }else{
+            $configureDescription = $principal->description_metatags;
+            $keyWords = $principal->key_words;
+            $titlePage = 'Trans';
+        }
+
+        return view('frontend.pages.trans', compact('principal','column1', 'column2', 'column3', 'trans', 'transAll', 'configureDescription', 'keyWords', 'titlePage'));
     }
 
     function escorts(){
-        return $this->base('pages', 'scorts');
-    }
+        $principal = principal::first();
+        $column1 = columnOne::all();
+        $column2 = columnTwo::all();
+        $column3 = columnTree::all();
+        $escortDelux = profile::where('deluxe_escort', '=', 'on')->where('is_spanish', '=', 'true')->get();
+        $escortFeatured = profile::where('featured_escort', '=', 'on')->where('is_spanish', '=', 'true')->get();
+        $escortNovelties = profile::where('category', '=', 'escorts')->where('is_spanish', '=', 'true')->orderBy('created_at', 'desc')->take(5)->get();
 
+        if(isset($escortDelux[0])){
+            $configureDescription = $escortDelux[0]->description_metatags;
+            $keyWords = $escortDelux[0]->key_words;
+            $titlePage = 'Escort';
+        }else{
+            $configureDescription = $principal->description_metatags;
+            $keyWords = $principal->key_words;
+            $titlePage = 'Escort';
+        }
+
+        return view('frontend.pages.scorts', compact('principal','column1', 'column2', 'column3', 'escortDelux', 'escortFeatured', 'escortNovelties',  'configureDescription', 'keyWords', 'titlePage'));
+
+    }
 
     function profile($code){
         $principal = principal::first();
@@ -47,28 +126,11 @@ class PagesController extends Controller
         $profileEnglish = profile::where('profile.code', $code)
                         ->where('is_spanish', '=', 'false')
                         ->first();
+        $configureDescription = $profileSpanish->description_metatags;
+        $keyWords = $profileSpanish->key_words;
+        $titlePage = $profileSpanish->name;
 
-//        return compact('profileSpanish', 'profileEnglish');
-        return view('frontend.profiles.baseProfiles', compact('profileSpanish', 'profileEnglish', 'principal', 'column1', 'column2', 'column3'));
+        return view('frontend.profiles.baseProfiles', compact('profileSpanish', 'profileEnglish', 'principal', 'column1', 'column2', 'column3', 'configureDescription', 'keyWords', 'titlePage'));
     }
 
-    protected function base($folder, $view){
-        $principal = principal::first();
-        $column1 = columnOne::all();
-        $column2 = columnTwo::all();
-        $column3 = columnTree::all();
-        $escortDelux = profile::where('deluxe_escort', '=', 'on')->where('is_spanish', '=', 'true')->get();
-        $escortFeatured = profile::where('featured_escort', '=', 'on')->where('is_spanish', '=', 'true')->get();
-        $escortNovelties = profile::where('category', '=', 'escorts')->where('is_spanish', '=', 'true')->orderBy('created_at', 'desc')->take(5)->get();
-        $trans = profile::where('category', '=', 'trans')->where('is_spanish', '=', 'true')->orderBy('created_at', 'desc')->take(5)->get();
-        $transAll = profile::where('category', '=', 'trans')->where('is_spanish', '=', 'true')->orderBy('created_at', 'asc')->get();
-
-        $boys = profile::where('category', '=', 'boys')->where('is_spanish', '=', 'true')->orderBy('created_at', 'desc')->take(5)->get();
-        $boysAll = profile::where('category', '=', 'boys')->where('is_spanish', '=', 'true')->orderBy('created_at', 'asc')->get();
-
-        $agency = profile::where('category', '=', 'agencias')->where('is_spanish', '=', 'true')->orderBy('created_at', 'desc')->take(5)->get();
-        $agencyAll = profile::where('category', '=', 'agencias')->where('is_spanish', '=', 'true')->orderBy('created_at', 'asc')->get();
-
-        return view('frontend.' . $folder . '.' . $view, compact('principal','column1', 'column2', 'column3', 'escortDelux', 'escortFeatured', 'escortNovelties', 'trans', 'transAll', 'boys', 'boysAll', 'agency', 'agencyAll'));
-    }
 }

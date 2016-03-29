@@ -160,6 +160,22 @@
     <br>
 
     <div class="row">
+        <div class="row col-md-6">
+            <label class="col-md-4 control-label" for="profileExit">{!! trans('label.area') !!}</label>
+            <div class="col-md-8">
+                <input type="text" class="form-control" name="area" value="{!! $dataSpanish->area !!}">
+            </div>
+        </div>
+        <div class="row col-md-6">
+            <label class="col-md-4 control-label" for="profileTimetable">{!! trans('label.zona') !!}</label>
+            <div class="col-md-8">
+                <input type="text" class="form-control" name="zona" value="{!! $dataSpanish->zona !!}">
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
         <div class="row col-md-12">
             <label class="col-md-2 control-label" for="textareaDefault">{!! trans('label.description_profile') !!}</label>
             <div class="col-md-10">

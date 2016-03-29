@@ -29,6 +29,8 @@ class profile extends Model
         'key_words',
         'description_metatags',
         'title_metatags',
+        'area',
+        'zona'
     ];
 
     protected $relations = [

@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         $escortDelux = profile::where('deluxe_escort', '=', 'on')->where('is_spanish', '=', 'true')->get();
         $escortFeatured = profile::where('featured_escort', '=', 'on')->where('is_spanish', '=', 'true')->get();
         $escortNovelties = profile::orderBy('created_at', 'desc')->where('is_spanish', '=', 'true')->take(4)->get();
@@ -33,7 +34,11 @@ class HomeController extends Controller
         $column3 = columnTree::all();
         $banners = banners::all();
         $sliders = sliders::all();
-        return view('frontend.index.index', compact('principal', 'column1', 'column2', 'column3','banners', 'sliders', 'escortDelux', 'escortFeatured', 'escortNovelties'));
+
+        $configureDescription = $principal->siteDescription;
+        $keyWords = $principal->keywords;
+        $titlePage = 'Homepage';
+        return view('frontend.index.index', compact('principal', 'column1', 'column2', 'column3','banners', 'sliders', 'escortDelux', 'escortFeatured', 'escortNovelties', 'configureDescription', 'keyWords', 'titlePage'));
     }
 
 

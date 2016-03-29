@@ -81,6 +81,8 @@ return [
     'success_delete' => 'Eliminacion realizada con exito',
     'description_photo' => 'Seleccione las fotos para mostrar en su perfil',
     'check_photos' => 'Fotos estan verificadas',
-    'state_profile' => 'Estado del perfil'
+    'state_profile' => 'Estado del perfil',
+    'area' => 'Area',
+    'zona' => 'Zona'
 
 ];

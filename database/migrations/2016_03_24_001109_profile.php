@@ -37,6 +37,9 @@ class Profile extends Migration
             $table->string('description_metatags');
             $table->string('title_metatags');
 
+            $table->string('area');
+            $table->string('zona');
+
 
 
             $table->timestamps();

@@ -9,10 +9,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="{!! $configureDescription !!}">
     <meta name="author" content="">
-    <meta name="keywords" content="">
-    <title>Escorts in Mallorca</title>
+    <meta name="keywords" content="{!! $keyWords !!}">
+    <title>{{ $titlePage }}</title>
 
     @include('frontend.css.css')
 </head>
