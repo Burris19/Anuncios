@@ -34,6 +34,7 @@ class UserEditRequest extends Request
     {
         return [
             'name'     => 'required',
+            'email'    => 'required|email|unique:users,email,' . $this->route->getParameter('configure_profile'),
             'password' => 'min:8',
             'password_confirmation' => 'same:password',
             'photo' => 'mimes:jpeg,png'

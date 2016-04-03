@@ -7,11 +7,20 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Requests\UserEditRequest;
 use App\Http\Controllers\Controller;
+use Validator;
 
 use App\User;
 
 class UsersController extends Controller
 {
+    protected $rules = [
+        'name'     => 'required',
+        // 'email'    => 'required|email|unique:users',
+        'password' => 'min:8',
+        'password_confirmation' => 'same:password',
+        'photo' => 'mimes:jpeg,png'
+    ];
+
     /**
      * Display a listing of the resource.
      *
@@ -75,12 +84,9 @@ class UsersController extends Controller
      */
     public function update(UserEditRequest $request, $id)
     {
-
-
         $user = User::findOrFail($id);
         $user->fill($request->all());
         $user->save();
-
         return redirect()->to('/admin')->with('status',trans('label.success_update'));
     }
 

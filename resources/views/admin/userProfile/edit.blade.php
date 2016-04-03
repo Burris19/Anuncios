@@ -9,12 +9,17 @@
                 <h2 class="panel-title">{!! trans('label.update_profile') !!}</h2>
             </header>
             <div class="panel-body">
-                
+
                 {!!Form::model($user, ['route' => ['admin.configure-profile.update', $user->id], 'method' => 'PUT', 'files' => true, 'class' => 'sendEdit'])!!}
 
                     <div class="form-group">
                         <label for="name">{!! trans('label.name_profile') !!}</label>
                         {!!Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Nombre', 'required' => 'required'])!!}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        {!!Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Correo Electronico', 'id' => 'email'])!!}
                     </div>
 
                     <div class="form-group">
@@ -36,7 +41,7 @@
                     {!!Form::submit(trans('label.save'), ['class' => 'btn btn-primary'])!!}
 
                 {!!Form::close()!!}
-                
+
             </div>
         </section>
     </div>
@@ -75,5 +80,5 @@
             }
         });
     });
-    
+
 </script>

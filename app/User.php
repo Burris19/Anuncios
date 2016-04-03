@@ -30,7 +30,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['name', 'password', 'photo'];
+    protected $fillable = ['name', 'email', 'password', 'photo'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -50,13 +50,13 @@ class User extends Model implements AuthenticatableContract,
     {
         if ( !empty($photo) ) {
 
-            if ($this->photo != 'userDefault.png') { 
+            if ($this->photo != 'userDefault.png') {
                 \Storage::delete($this->photo);
             }
 
             $this->attributes['photo'] = Carbon::now()->second . $photo->getClientOriginalName();
             $name = Carbon::now()->second . $photo->getClientOriginalName();
             \Storage::disk('local')->put($name, \File::get($photo));
-        } 
+        }
     }
 }
