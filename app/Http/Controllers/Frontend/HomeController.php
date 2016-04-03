@@ -13,7 +13,7 @@ use App\models\columnTwo;
 use App\models\columnTree;
 use App\models\banners;
 use App\models\sliders;
-
+use App\models\SEO;
 class HomeController extends Controller
 {
     /**
@@ -35,8 +35,10 @@ class HomeController extends Controller
         $banners = banners::all();
         $sliders = sliders::all();
 
-        $configureDescription = $principal->siteDescription;
-        $keyWords = $principal->keywords;
+        $seo = SEO::first();
+        $configureDescription = $seo->siteDescription;
+        $keyWords = $seo->keywords;
+
         $titlePage = 'Homepage';
         return view('frontend.index.index', compact('principal', 'column1', 'column2', 'column3','banners', 'sliders', 'escortDelux', 'escortFeatured', 'escortNovelties', 'configureDescription', 'keyWords', 'titlePage'));
     }
