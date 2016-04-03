@@ -27,6 +27,28 @@ class UploadX {
         }
     }
 
+    public static  function uploadFileTwo($file, $folder){
+        $name = $file->getClientOriginalName();
+        // Verify if directory exists
+        if (!is_dir($folder))
+        {
+            // Create directory
+            $oldmask = umask(0);
+            mkdir($folder, 0777);
+            umask($oldmask);
+        }
+
+        $url = $folder . '/' . $name;
+        if (File::copy($file,$url))
+        {
+            return compact('name','folder');
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public static function downloadFile($file,$name){
         $file = public_path() . '/' . $file;
         $headers = array();

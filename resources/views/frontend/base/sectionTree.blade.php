@@ -4,7 +4,7 @@
             @foreach($banners as $banner)
                 <div class="owl-item">
                     <div class="entry">
-                        <img src="{!! $banner->photo !!}" alt="">
+                        <img src="banners/{!! $banner->photo !!}" alt="">
                         <div class="magnifier">
                             <div class="visible-buttons">
                                 <a title="{!! $banner->name !!}" href="{!! $banner->URL !!}" title="{!! $banner->URL !!}" target="_blank"><i class="fa fa-link"></i></a>
@@ -16,4 +16,3 @@
         </div>
     </div>
 </section>
-

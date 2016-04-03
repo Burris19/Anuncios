@@ -51,7 +51,7 @@ abstract class BaseController extends Controller
      */
     public function create()
     {
-        
+
     }
 
     /**
@@ -72,8 +72,8 @@ abstract class BaseController extends Controller
         }else{
 
             if($request->hasFile('input-file-preview')) {
-                $image = UploadX::uploadFile($request->file('input-file-preview'),'banners', time());
-                $data['photo'] = $image['url'];
+                $image = UploadX::uploadFileTwo($request->file('input-file-preview'),'banners');
+                $data['photo'] = $image['name'];
             }else{
                 $data['photo'] = "defaultBanner.png";
             }
