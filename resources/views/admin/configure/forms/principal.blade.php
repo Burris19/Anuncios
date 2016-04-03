@@ -28,7 +28,7 @@
                     <span class="input-group-addon">
                         <i class="fa fa-phone"></i>
                     </span>
-                    {!! Form::number('phone',$data->phone,['class'=>'form-control','placeholder'=>'Telefono','required' => 'required', 'min' => '1']) !!}
+                    {!! Form::text('phone',$data->phone,['class'=>'form-control','placeholder'=>'Telefono','required' => 'required']) !!}
                 </div>
             </div>
         </div>
