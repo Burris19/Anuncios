@@ -160,15 +160,9 @@
     <br>
 
     <div class="row">
-        <div class="row col-md-6">
-            <label class="col-md-4 control-label" for="profileExit">{!! trans('label.area') !!}</label>
-            <div class="col-md-8">
-                <input type="text" class="form-control" name="area" value="{!! $dataSpanish->area !!}">
-            </div>
-        </div>
-        <div class="row col-md-6">
-            <label class="col-md-4 control-label" for="profileTimetable">{!! trans('label.zona') !!}</label>
-            <div class="col-md-8">
+        <div class="row col-md-12">
+            <label class="col-md-2 control-label" for="profileTimetable">{!! trans('label.zona') !!}</label>
+            <div class="col-md-10">
                 <input type="text" class="form-control" name="zona" value="{!! $dataSpanish->zona !!}">
             </div>
         </div>
@@ -189,15 +183,9 @@
 <fieldset>
 
     <div class="row">
-        <div class="row col-md-6">
-            <label class="col-md-4 control-label" for="profileTitlemeta">{!! trans('label.title_metatags') !!}</label>
-            <div class="col-md-8">
-                <input type="text" class="form-control" name="title_metatags" value="{!! $dataSpanish->title_metatags !!}"  >
-            </div>
-        </div>
-        <div class="row col-md-6">
-            <label class="col-md-4 control-label" for="textareaDescmeta">{!! trans('label.description_metatags') !!}</label>
-            <div class="col-md-8">
+        <div class="row col-md-12">
+            <label class="col-md-2 control-label" for="textareaDescmeta">{!! trans('label.description_metatags') !!}</label>
+            <div class="col-md-10">
                 <textarea class="form-control" rows="3" name="description_metatags"  >{!! $dataSpanish->description_metatags !!}</textarea>
             </div>
         </div>
@@ -206,10 +194,8 @@
 
     <div class="form-group">
         <label class="col-md-2 control-label" for="textareaKeywords">{!! trans('label.key_words') !!}</label>
-        <div class="col-md-6">
+        <div class="col-md-9">
             <textarea class="form-control" rows="3" name="key_words"  >{!! $dataSpanish->key_words !!}</textarea>
         </div>
     </div>
 </fieldset>
-
-

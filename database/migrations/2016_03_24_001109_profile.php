@@ -36,8 +36,7 @@ class Profile extends Migration
             $table->string('key_words');
             $table->string('description_metatags');
             $table->string('title_metatags');
-
-            $table->string('area');
+            
             $table->string('zona');
 
 

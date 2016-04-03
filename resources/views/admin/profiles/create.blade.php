@@ -69,14 +69,8 @@
 
                 <div class="panel-footer">
                     <ul class="pager">
-                        <li class="previous disabled">
-                            <a><i class="fa fa-angle-left"></i> {!! trans('label.previous') !!}</a>
-                        </li>
                         <li class="finish hidden pull-right">
                             <a id="finishProfileCreate">{!! trans('label.finish') !!}</a>
-                        </li>
-                        <li class="next">
-                            <a>{!! trans('label.next') !!} <i class="fa fa-angle-right"></i></a>
                         </li>
                     </ul>
                 </div>

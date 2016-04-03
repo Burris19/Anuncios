@@ -28,8 +28,6 @@ class profile extends Model
         'timetable',
         'key_words',
         'description_metatags',
-        'title_metatags',
-        'area',
         'zona'
     ];
 

@@ -173,15 +173,9 @@
 <fieldset>
 
     <div class="row">
-        <div class="row col-md-6">
-            <label class="col-md-4 control-label" for="profileTitlemeta">{!! trans('label.title_metatags') !!}</label>
-            <div class="col-md-8">
-                <input type="text" class="form-control" name="title_metatags2" value="{!! $dataEnglish->title_metatags !!}"  >
-            </div>
-        </div>
-        <div class="row col-md-6">
-            <label class="col-md-4 control-label" for="textareaDescmeta">{!! trans('label.description_metatags') !!}</label>
-            <div class="col-md-8">
+        <div class="row col-md-12">
+            <label class="col-md-2 control-label" for="textareaDescmeta">{!! trans('label.description_metatags') !!}</label>
+            <div class="col-md-10">
                 <textarea class="form-control" rows="3" name="description_metatags2"  >{!! $dataEnglish->description_metatags !!}</textarea>
             </div>
         </div>
@@ -190,10 +184,8 @@
 
     <div class="form-group">
         <label class="col-md-2 control-label" for="textareaKeywords">{!! trans('label.key_words') !!}</label>
-        <div class="col-md-6">
+        <div class="col-md-10">
             <textarea class="form-control" rows="3" name="key_words2"  >{!! $dataEnglish->key_words !!}</textarea>
         </div>
     </div>
 </fieldset>
-
-

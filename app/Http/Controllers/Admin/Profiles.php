@@ -88,7 +88,6 @@ class Profiles extends Controller
         $data2['timetable'] = $data['timetable2'];
         $data2['key_words'] = $data['key_words2'];
         $data2['description_metatags'] = $data['description_metatags2'];
-        $data2['title_metatags'] = $data['title_metatags2'];
 
         $english = profile::create($data2);
 
@@ -208,7 +207,6 @@ class Profiles extends Controller
             $data2['timetable'] = $data['timetable2'];
             $data2['key_words'] = $data['key_words2'];
             $data2['description_metatags'] = $data['description_metatags2'];
-            $data2['title_metatags'] = $data['title_metatags2'];
 
             $dataEnglish->update($data2);
             $dataEnglish->save();
