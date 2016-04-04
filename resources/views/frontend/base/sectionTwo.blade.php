@@ -1,7 +1,7 @@
 <section class="section white">
     <div class="container">
         <div class="big-title text-center">
-            <h3>Escorts Destacadas</h3>
+            <h3>Escorts {!! trans('label.outstanding') !!}</h3>
             <hr>
             <p class="lead">{!! $principal->featuredDescription !!}</p>
         </div><!-- end title -->

@@ -82,8 +82,17 @@ return [
     'description_photo' => 'Select the photos to display on your profile',
     'check_photos' => 'Photos verified ?',
     'state_profile' => 'State Profile',
-    'zona' => 'Area/Zone'
-
+    'zona' => 'Area/Zone',
+    'legal_conditions' => 'Legal Conditions',
+    'copy_right' => 'All Rights reserved',
+    'agencies' => 'Agencies',
+    'escorts' => 'Escorts',
+    'trans' => 'Trans',
+    'boys' => 'Boys',
+    'email_frontend' => 'Email',
+    'phone_frontend' => 'Telephone',
+    'outstanding' => 'Outstanding',
+    'new_frontend' => "Novedades"
 
 
 

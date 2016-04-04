@@ -52,7 +52,9 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
+    
+//    'locale_frontend' => 'es',
 //    'locales' => ['en' => 'English', 'es' => 'Spanish'],
     /*
     |--------------------------------------------------------------------------

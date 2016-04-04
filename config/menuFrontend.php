@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'home' => 'Inicio',
-    'escorts' => 'Escorts',
-    'trans' => 'Trans',
-    'boy' => 'Boys',
-    'agency' => 'Agencias',
+    'home' => 'home',
+    'escorts' => 'escorts',
+    'trans' => 'trans',
+    'boy' => 'boys',
+    'agency' => 'agencies',
 
 ];

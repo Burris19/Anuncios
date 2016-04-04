@@ -24,7 +24,7 @@
 
                                             @foreach(config('menuFrontend') as $key => $value)
                                                 <li>
-                                                    <a href="/{!! $key !!}">{!! $value !!}</a>
+                                                    <a href="/{!! $key !!}">{!! trans('label.'.$value) !!}</a>
                                                 </li>
                                             @endforeach
                                         </ul>

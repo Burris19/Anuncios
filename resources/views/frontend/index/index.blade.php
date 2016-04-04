@@ -1,5 +1,16 @@
 @extends('frontend.base.layout')
 
+@section('language')
+    <div class="col-md-6 text-right">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img @if( \Config::get('app.locale') == 'es' ) src="/assets-frontend/images/icons/es.png" @else src="/assets-frontend/images/icons/en.png" @endif style="width: 30px; height: 20px" > <span class="fa fa-angle-down"></span></button>
+            <ul class="dropdown-menu start-right" role="menu">
+                <li><a href="/locale?locale=en"><img src="/assets-frontend/images/icons/en.png" alt="English"> {!! trans('label.english') !!}</a></li>
+                <li><a href="/locale?locale=es"><img src="/assets-frontend/images/icons/es.png" alt="Español"> {!! trans('label.spanish') !!}</a></li>
+            </ul>
+        </div><!-- end left -->
+@endsection
+
 @section('content')
     @include('frontend.base.slider')
 

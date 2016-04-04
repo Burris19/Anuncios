@@ -1,7 +1,7 @@
 <section class="section white">
     <div class="container">
         <div class="big-title text-center">
-            <h3>Novedades</h3>
+            <h3>{!! trans('label.new_frontend') !!}</h3>
             <hr>
             <p class="lead">{!! $principal->novelties !!}</p>
         </div><!-- end title -->
@@ -27,7 +27,7 @@
                             </div><!-- end magnifier -->
                         </div><!-- end entry -->
                         <h3>{!! $profile->name !!}</h3>
-                        <small>Escort Destacadas</small>
+                        <small>{!! trans('label.new_frontend') !!}</small>
                     </div><!-- end team-member -->
                 </div>
             @endforeach

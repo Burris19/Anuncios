@@ -4,7 +4,7 @@
         <section class="section white">
             <div class="container">
                 <div class="big-title text-center">
-                    <h3>Agencias</h3>
+                    <h3>{!! trans('label.agencies') !!}</h3>
                 </div><!-- end title -->
 
                 <hr class="invis">
@@ -18,7 +18,14 @@
                                     <img src="/{!! $profile->images['url1'] !!}" alt="">
                                     <div class="magnifier">
                                         <div class="visible-buttons">
-                                            <a title="{!! $profile->name !!}" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-heart-o"></i></a>
+                                            {{--<a title="{!! $profile->name !!}" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-heart-o"></i></a>--}}
+                                            {{--<a title="{!! $profile->name !!}" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-link"></i></a>--}}
+                                            {!! Form::open(['url' => '/profile/' . $profile->name , 'method' => 'POST', 'target' => '_blank']) !!})
+                                            {{--<a class="sendProfile" title="{!! $profile->name !!}" href="/profile/{!! $profile->name !!}" target="_blank"><i class="fa fa-heart-o"></i></a>--}}
+                                            <a href="#" class="sendProfile"><i class="fa fa-heart-o"></i></a>
+                                            <input type="hidden" name="code" value="{!! $profile->code !!}"/>
+                                            <button type="submit" class="showProfile"></button>
+                                            {!! Form::close() !!}
                                         </div><!-- end buttons -->
                                     </div><!-- end magnifier -->
                                 </div><!-- end entry -->
@@ -48,7 +55,14 @@
                                 <img src="/{!! $profile->images['url1'] !!}" alt="">
                                 <div class="magnifier">
                                     <div class="visible-buttons">
-                                        <a title="{!! $profile->name !!}" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-link"></i></a>
+                                        {{--<a title="{!! $profile->name !!}" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-link"></i></a>--}}
+                                        {{--<a title="{!! $profile->name !!}" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-link"></i></a>--}}
+                                        {!! Form::open(['url' => '/profile/' . $profile->name , 'method' => 'POST', 'target' => '_blank']) !!})
+                                        {{--<a class="sendProfile" title="{!! $profile->name !!}" href="/profile/{!! $profile->name !!}" target="_blank"><i class="fa fa-heart-o"></i></a>--}}
+                                        <a href="#" class="sendProfile"><i class="fa fa-heart-o"></i></a>
+                                        <input type="hidden" name="code" value="{!! $profile->code !!}"/>
+                                        <button type="submit" class="showProfile"></button>
+                                        {!! Form::close() !!}
                                     </div><!-- end buttons -->
                                 </div><!-- end magnifier -->
                             </div><!-- end entry -->
@@ -65,3 +79,5 @@
         </section><!-- end section -->
 
 @endsection
+
+@include('frontend.script.helps')

@@ -16,7 +16,7 @@
                 {{--</li>--}}
             {{--</ul>--}}
             {{--<div class="tab-content">--}}
-                <input type="hidden" id="language" value="<?php echo \Config::get('app.locale')?>">
+                <input type="hidden" id="language" value="<?php echo \Config::get('app.locale_frontend');?>">
                 @include('frontend.base.contentProfile')
             {{--</div>--}}
         {{--</div>--}}

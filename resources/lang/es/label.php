@@ -83,6 +83,16 @@ return [
     'check_photos' => 'Fotos estan verificadas',
     'state_profile' => 'Estado del perfil',
     'area' => 'Area',
-    'zona' => 'Area/Zone'
+    'zona' => 'Area/Zone',
+    'legal_conditions' => 'Condiciones legales',
+    'copy_right' => 'Todos los derechos reservados',
+    'agencies' => 'Agencias',
+    'escorts' => 'Escorts',
+    'trans' => 'Trans',
+    'boys' => 'Chicos',
+    'email_frontend' => 'Correo Electronico',
+    'phone_frontend' => 'Telefono',
+    'outstanding' => 'Destacadas',
+    'new_frontend' => "What's New"
 
 ];

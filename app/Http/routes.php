@@ -15,6 +15,7 @@
  * Routes for client
  */
 
+
 Route::group(['namespace' => 'Frontend'], function() {
     Route::get('/', 'HomeController@index');
     Route::get('home', 'HomeController@index');
@@ -23,6 +24,7 @@ Route::group(['namespace' => 'Frontend'], function() {
     Route::get('trans', 'PagesController@trans');
     Route::get('escorts', 'PagesController@escorts');
     Route::POST('profile/{name}', 'PagesController@profile');
+    Route::get('locale', 'Configuration@index');
 });
 
 

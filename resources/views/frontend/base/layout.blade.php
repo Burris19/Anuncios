@@ -17,7 +17,6 @@
     @include('frontend.css.css')
 </head>
 <body>
-
     <div class="wrapper">
         @include('frontend.base.header')
         @include('frontend.base.nav')
@@ -26,5 +25,6 @@
         @include('frontend.base.copyright')
     </div>
     @include('frontend.script.script')
+
 </body>
 </html>

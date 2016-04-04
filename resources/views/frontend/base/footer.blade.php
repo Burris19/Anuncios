@@ -6,12 +6,12 @@
                     <div class="about-widget">
                         <address>
                             <i class="fa fa-envelope-o alignleft"></i>
-                            <strong>Email:</strong>
+                            <strong>{!! trans('label.email_frontend') !!}</strong>
                             <p><a href="{!! $principal->email !!}">{!! $principal->email !!}</a></p>
                         </address>
                         <address>
                             <i class="fa fa-phone alignleft"></i>
-                            <strong>Teléfono</strong>
+                            <strong>{!! trans('label.phone_frontend') !!}</strong>
                             <p>{!! $principal->phone !!}</p>
                         </address>
                     </div><!-- end about-widget -->
