@@ -112,18 +112,20 @@ class PagesController extends Controller
 
     }
 
-    function profile($code){
+    function profile(Request $requests, $code){
+
+        $codeProfile = $requests->get('code');
         $principal = principal::first();
         $column1 = columnOne::all();
         $column2 = columnTwo::all();
         $column3 = columnTree::all();
 
         $profileSpanish = profile::with('images')
-                        ->where('profile.code', $code)
+                        ->where('profile.code', $codeProfile)
                         ->where('is_spanish', '=', 'true')
                         ->first();
 
-        $profileEnglish = profile::where('profile.code', $code)
+        $profileEnglish = profile::where('profile.code', $codeProfile)
                         ->where('is_spanish', '=', 'false')
                         ->first();
         $configureDescription = $profileSpanish->description_metatags;

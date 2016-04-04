@@ -17,7 +17,14 @@
                         <img src="/{!! $profile->images['url1'] !!}" alt="">
                         <div class="magnifier">
                             <div class="visible-buttons">
-                                <a title="" href="/profile/{!! $profile->code !!}" target="_blank"><i class="fa fa-heart-o"></i></a>
+
+                                {!! Form::open(['url' => '/profile/' . $profile->name , 'method' => 'POST', 'target' => '_blank']) !!})
+                                {{--<a class="sendProfile" title="{!! $profile->name !!}" href="/profile/{!! $profile->name !!}" target="_blank"><i class="fa fa-heart-o"></i></a>--}}
+                                <a href="#" class="sendProfile"><i class="fa fa-heart-o"></i></a>
+                                <input type="hidden" name="code" value="{!! $profile->code !!}"/>
+                                <button type="submit" class="showProfile"></button>
+                                {!! Form::close() !!}
+
                             </div><!-- end buttons -->
                         </div><!-- end magnifier -->
                     </div><!-- end entry -->
@@ -30,3 +37,4 @@
         </div><!-- end row -->
     </div><!-- end container -->
 </section><!-- end section -->
+

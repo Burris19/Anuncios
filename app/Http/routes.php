@@ -22,7 +22,7 @@ Route::group(['namespace' => 'Frontend'], function() {
     Route::get('boy', 'PagesController@boy');
     Route::get('trans', 'PagesController@trans');
     Route::get('escorts', 'PagesController@escorts');
-    Route::get('profile/{code}', 'PagesController@profile');
+    Route::POST('profile/{name}', 'PagesController@profile');
 });
 
 
