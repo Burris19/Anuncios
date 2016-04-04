@@ -151,6 +151,16 @@
 
     <div class="row">
         <div class="row col-md-12">
+            <label class="col-md-2 control-label" for="profileTimetable">{!! trans('label.zona') !!}</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" name="zona2">
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="row col-md-12">
             <label class="col-md-2 control-label" for="textareaDefault">{!! trans('label.description_profile') !!}</label>
             <div class="col-md-10">
                 <textarea class="form-control" rows="3"  name="description2"  ></textarea>

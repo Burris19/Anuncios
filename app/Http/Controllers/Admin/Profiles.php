@@ -77,6 +77,7 @@ class Profiles extends Controller
         $data2['phone'] = $data['phone2'];
         $data2['height'] = $data['height2'];
         $data2['measurements'] = $data['measurements2'];
+        $data2['zona'] = $data['zona2'];
 //        $data2['deluxe_escort'] = $data['deluxe_escort2'];
 //        $data2['featured_escort'] = $data['featured_escort2'];
         $data2['category'] = $data['category2'];

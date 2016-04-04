@@ -83,6 +83,6 @@ return [
     'check_photos' => 'Fotos estan verificadas',
     'state_profile' => 'Estado del perfil',
     'area' => 'Area',
-    'zona' => 'Zona'
+    'zona' => 'Area/Zone'
 
 ];

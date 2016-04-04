@@ -6,7 +6,7 @@
                 <div class="panel-actions">
                     <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
                 </div>
-                <h2 class="panel-title">{!! trans('label.title_banners') !!}</h2>
+                <h2 class="panel-title">{!! trans('label.title_sliders') !!}</h2>
             </header>
             <div class="panel-body">
                 {!! Form::open(['url' => '/admin/configure-slide-show', 'method' => 'POST' , 'class' => 'sendForm']) !!}
