@@ -74,3 +74,5 @@
                 startWithSlide:0
             });
 </script>
+
+@yield('other-script')

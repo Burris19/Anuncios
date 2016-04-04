@@ -1,4 +1,4 @@
-<div id="w2-spanish" class="tab-pane active">
+<div id="w2-spanish" style="display: none;">
     <section class="page-title grey clearfix">
         <div class="container">
             <div class="row">
@@ -128,11 +128,7 @@
     @include('frontend.base.imagesProfiles')
 
 </div>
-
-
-
-
-<div id="w2-english" class="tab-pane">
+<div id="w2-english" style="display: none;">
     
     <section class="page-title grey clearfix">
         <div class="container">
