@@ -79,6 +79,7 @@ return [
     'confirm_password' => 'Confirm Password',
     'success_update' => 'Information Update Success',
     'success_delete' => 'Delete success',
+    'success_create' => 'Save register success',
     'description_photo' => 'Select the photos to display on your profile',
     'check_photos' => 'Photos verified ?',
     'state_profile' => 'State Profile',
@@ -93,8 +94,9 @@ return [
     'phone_frontend' => 'Telephone',
     'outstanding' => 'Outstanding',
     'new_frontend' => "Novedades",
-    'users' => 'Usuarios',
-    'dashboard' => 'Dashboard'
+    'users' => 'Users',
+    'dashboard' => 'Dashboard',
+    'create' => 'Create register'
 
 
 

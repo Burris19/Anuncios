@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\Http\Requests\UserEditRequest;
 use App\Http\Controllers\Controller;
 use Validator;
-
+use App\Helpers\UploadX;
 use App\User;
 
 class UsersController extends Controller
@@ -28,7 +28,9 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::where('id', '!=', \Auth::id())->get();
+
+        return view('admin.users.list', compact('users'));
     }
 
     /**
@@ -38,7 +40,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.users.create');
     }
 
     /**
@@ -49,7 +51,25 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $data = $request->all();
+        $this->rules['email'] = 'required|email|unique:users';
+
+        $validator = Validator::make($data, $this->rules);
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)
+                ->withInput();
+        }else{
+
+            if($request->hasFile('photo')) {
+                $image = UploadX::uploadFileTwo($request->file('photo'),'assets/imgProfiles');
+                $data['photo'] = $image['name'];
+            }
+            $register = User::create($data);
+            $message = trans('label.success_create');
+        }
+
+        return Redirect('/admin/users')->with('status',$message);
     }
 
     /**
@@ -60,7 +80,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        //
+        return "show";
     }
 
     /**

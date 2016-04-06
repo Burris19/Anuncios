@@ -42,6 +42,7 @@ Route::group(['prefix' => 'admin'], function () {
         resource('configure-column-tree', 'ConfigureColumnTree');
         resource('configure-banner', 'ConfigureBanners');
         resource('configure-slide-show', 'ConfigureSlideShow');
+        resource('users', 'UsersController');
         resource('profiles','Profiles');
         resource('configure-profile', 'UsersController');
         Route::get('locale', 'Configuration@index');

@@ -14,6 +14,10 @@
 <link href="{!! asset('assets/stylesheets/skins/default.css') !!}" media="all" rel="stylesheet" type="text/css" />
 <link href="{!! asset('assets/stylesheets/theme-custom.css') !!}" media="all" rel="stylesheet" type="text/css" />
 
+<link href="{!! asset('assets/stylesheets/select2.css') !!}" media="all" rel="stylesheet" type="text/css" />
+<link href="{!! asset('assets/stylesheets/select2-bootstrap.css') !!}" media="all" rel="stylesheet" type="text/css" />
+<link href="{!! asset('assets/stylesheets/datatables.css') !!}" media="all" rel="stylesheet" type="text/css" />
+
 
 <style >
     #tblListado_filter{
@@ -54,7 +58,7 @@
         cursor: pointer;
         opacity: 0;
         filter: alpha(opacity=0);
-    /*    white-space: nowrap;*/
+        /*    white-space: nowrap;*/
     }
     .image-preview-input-title {
         margin-left:2px;
