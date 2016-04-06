@@ -80,7 +80,8 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        return "show";
+        $user = User::find($id);
+        return view('admin.users.delete', compact('user'));
     }
 
     /**
@@ -92,7 +93,15 @@ class UsersController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        return view('admin.userProfile.edit', ['user' => $user]);
+
+        if(\Request::ajax())
+        {
+            return view('admin.userProfile.edit', ['user' => $user]);
+        }else{
+            return view('admin.users.edit', compact('user'));
+        }
+
+
     }
 
     /**
@@ -102,12 +111,37 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UserEditRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        $user = User::findOrFail($id);
-        $user->fill($request->all());
-        $user->save();
-        return redirect()->to('/admin')->with('status',trans('label.success_update'));
+
+        $register = User::findOrFail($id);
+
+        if($register){
+            $data = $request->all();
+
+            $this->rules['email'] = 'required|email|unique:users,email,'.$id;
+
+            $validator = Validator::make($data, $this->rules);
+
+            if ($validator->fails()) {
+                $errors  = $validator->errors()->all();
+            }else{
+
+                if($request->hasFile('photo')) {
+                    $image = UploadX::uploadFileTwo($request->file('photo'),'assets/imgProfiles');
+                    $data['photo'] = $image['name'];
+                }
+                $register->update($data);
+                $register->save();
+                return redirect()->to('/admin')->with('status',trans('label.success_update'));
+            }
+        }else {
+            $success = false;
+            $message = 'No se encontro el registro';
+
+        }
+
+
     }
 
     /**
@@ -118,6 +152,11 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $register = User::findOrFail($id);
+
+        $register->delete();
+
+        return redirect()->to('/admin/users')->with('status',trans('label.success_delete'));
+
     }
 }
