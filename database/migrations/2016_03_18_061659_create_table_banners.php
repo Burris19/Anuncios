@@ -17,6 +17,10 @@ class CreateTableBanners extends Migration
             $table->string('name');
             $table->string('URL');
             $table->string('photo');
+
+            $table->integer('id_agency')->unsigned();
+            $table->foreign('id_agency')->references('id')->on('agencies');
+
             $table->timestamps();
         });
     }

@@ -20,6 +20,10 @@ class CreateTableConfigurePrincipal extends Migration
             $table->string('featuredDescription');
             $table->string('novelties');
             $table->string('bannersDescription');
+
+            $table->integer('id_agency')->unsigned();
+            $table->foreign('id_agency')->references('id')->on('agencies');
+            
             $table->timestamps();
         });
     }

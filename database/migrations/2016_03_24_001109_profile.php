@@ -39,7 +39,8 @@ class Profile extends Migration
             
             $table->string('zona');
 
-
+            $table->integer('id_agency')->unsigned();
+            $table->foreign('id_agency')->references('id')->on('agencies');
 
             $table->timestamps();
         });

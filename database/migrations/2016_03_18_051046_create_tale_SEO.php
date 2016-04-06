@@ -16,6 +16,10 @@ class CreateTaleSEO extends Migration
             $table->increments('id');
             $table->string('siteDescription');
             $table->string('keywords');
+
+            $table->integer('id_agency')->unsigned();
+            $table->foreign('id_agency')->references('id')->on('agencies');
+            
             $table->timestamps();
         });
     }

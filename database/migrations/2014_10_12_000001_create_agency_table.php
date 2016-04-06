@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableSliders extends Migration
+class CreateAgencyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,14 @@ class CreateTableSliders extends Migration
      */
     public function up()
     {
-        Schema::create('sliders', function (Blueprint $table) {
+        Schema::create('agencies', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('URL');
-            $table->string('photo');
+            $table->string('city');
+            $table->string('phone');
 
-            $table->integer('id_agency')->unsigned();
-            $table->foreign('id_agency')->references('id')->on('agencies');
+            $table->integer('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('users');
             
             $table->timestamps();
         });
@@ -32,6 +32,6 @@ class CreateTableSliders extends Migration
      */
     public function down()
     {
-        Schema::drop('sliders');
+        Schema::drop('agencies');
     }
 }
