@@ -93,6 +93,9 @@ return [
     'email_frontend' => 'Correo Electronico',
     'phone_frontend' => 'Telefono',
     'outstanding' => 'Destacadas',
-    'new_frontend' => "What's New"
+    'new_frontend' => "What's New",
+    'users' => 'Users',
+    'dashboard' => 'Dashboard'
+    
 
 ];

@@ -92,7 +92,9 @@ return [
     'email_frontend' => 'Email',
     'phone_frontend' => 'Telephone',
     'outstanding' => 'Outstanding',
-    'new_frontend' => "Novedades"
+    'new_frontend' => "Novedades",
+    'users' => 'Usuarios',
+    'dashboard' => 'Dashboard'
 
 
 
